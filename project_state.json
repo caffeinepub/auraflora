@@ -1,12 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 9,
   "summary": "Website for a business called AuraFlora, themed with unique pastel colours to feel high-classed and abstract.",
   "architectural_notes": [
     "Use a blend of unique pastel colours throughout the design to convey a high-class, abstract feel"
   ],
   "known_issues": [],
   "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Elegant abstract pastel product placeholder — soft blush rose and champagne gold tones, botanical or floral abstract texture, square format (product-placeholder-1.dim_600x600.png)\n- Elegant abstract pastel product placeholder — lavender mist and sage green tones, botanical or floral abstract texture, square format (product-placeholder-2.dim_600x600.png)\n- Elegant abstract pastel product placeholder — champagne gold and blush rose tones, delicate petal motif, square format (product-placeholder-3.dim_600x600.png)\n- Elegant abstract pastel product placeholder — sage green and lavender mist tones, soft watercolour floral texture, square format (product-placeholder-4.dim_600x600.png)",
   "existing_features": [
     {
       "id": "feature-create-a-visually-striking-hero-section-with-the-auraflora-brand-name-a-refined-tagline-and-a-full-viewport-abstract-background-that-blends-soft-pastel-tones-such-as-blush-rose-lavender-mist-sage-green-and-champagne-gold-the-layout-should-feel-elevated-and-editorial",
@@ -103,6 +104,46 @@
         "REQ-12"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-servicessection-with-a-new-productssection-component-display-a-curated-grid-of-auraflora-products-at-minimum-4-6-items-each-shown-as-a-luxury-product-card-consistent-with-the-existing-pastel-design-system-each-card-should-include-a-product-image-placeholder-product-name-a-short-description-a-price-and-an-add-to-cart-or-buy-now-call-to-action-button-styled-in-the-auraflora-pastel-palette-with-elegant-hover-effects",
+      "title": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-client-side-shopping-cart-users-should-be-able-to-add-products-to-a-cart-view-the-cart-e-g-via-a-slide-out-drawer-or-modal-see-item-quantities-and-a-total-price-and-remove-items-the-cart-ui-must-follow-the-auraflora-pastel-design-system-frosted-glass-soft-pastel-tones-serif-headings",
+      "title": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-checkout-flow-that-allows-users-to-place-an-order-by-submitting-their-name-email-and-delivery-address-on-submission-open-a-pre-filled-mailto-uri-to-aurafloraaf-gmail-com-with-the-order-details-items-quantities-prices-customer-info-as-the-email-body-since-no-backend-payment-or-order-service-is-available",
+      "title": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-navbar-smooth-scroll-link-that-previously-pointed-to-the-services-section-so-it-now-points-to-the-new-products-section-anchor",
+      "title": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-navigation-links-so-that-any-reference-to-the-services-section-is-renamed-to-match-the-new-products-shop-section-and-scrolls-to-the-correct-anchor",
+      "title": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -115,6 +156,12 @@
     {
       "id": "AR-4",
       "summary": "Update contact section: email to aurafloraaf@gmail.com (interactable), studio location to Mumbai, change hours to show 24-48 hour revert time, add interactable Instagram link (aura._.flora_), footer: remove Facebook and Pinterest icons, update footer details, and wire enquiry form to send emails to aurafloraaf@gmail.com",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Replace the Services/Offerings section with a Products section where users can browse and buy products",
       "reqIds": [],
       "status": "pending"
     }

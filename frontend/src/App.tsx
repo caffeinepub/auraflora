@@ -1,10 +1,11 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
+import ProductsSection from './components/ProductsSection';
 import GallerySection from './components/GallerySection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import CartDrawer from './components/CartDrawer';
 
 export default function App() {
   return (
@@ -13,11 +14,12 @@ export default function App() {
       <main>
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
+        <ProductsSection />
         <GallerySection />
         <ContactSection />
       </main>
       <Footer />
+      <CartDrawer />
     </div>
   );
 }

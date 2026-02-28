@@ -1,98 +1,123 @@
 {
   "kind": "build_request",
-  "title": "Update contact details, footer, and wire enquiry form to Gmail",
+  "title": "Replace Services section with a shoppable Products section",
   "projectName": "AuraFlora",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-9",
-      "text": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
+      "id": "REQ-13",
+      "text": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-8"
         ],
         "quotes": [
-          "change the email to become interactable and make it as aurafloraaf@gmail.com",
-          "studio to jus mumbai",
-          "change the hours part and add reverts timings between upto 24-48hours"
+          "change the services page with products so that they can buy stuff"
         ]
       },
       "acceptanceCriteria": [
-        "Email displayed in ContactSection is 'aurafloraaf@gmail.com' and clicking it opens the user's email client via mailto:aurafloraaf@gmail.com",
-        "Studio/location field shows 'Mumbai'",
-        "Hours/availability field is replaced with text indicating response time of 24–48 hours"
+        "The ServicesSection and ServiceCard components are replaced or repurposed as a ProductsSection with product cards.",
+        "Each product card displays a product image placeholder, name, short description, and price.",
+        "Each card has an 'Add to Cart' or 'Buy Now' button styled to match the AuraFlora pastel theme.",
+        "Cards use pastel-tinted backgrounds and hover animations consistent with the existing design system.",
+        "The section heading is updated to reflect 'Products', 'Shop', or similar label."
       ]
     },
     {
-      "id": "REQ-10",
-      "text": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
+      "id": "REQ-14",
+      "text": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-8"
         ],
         "quotes": [
-          "add our instagram page also interactable which is aura._.flora_"
+          "so that they can buy stuff"
         ]
       },
       "acceptanceCriteria": [
-        "An Instagram handle '@aura._.flora_' is visible in the ContactSection",
-        "Clicking it opens https://www.instagram.com/aura._.flora_/ in a new browser tab"
+        "Clicking 'Add to Cart' adds the product to a cart state managed in React.",
+        "A cart icon/button in the Navbar or page shows the current item count.",
+        "Opening the cart displays all added items with name, quantity, unit price, and a line total.",
+        "Users can increment, decrement, or remove items from the cart.",
+        "A subtotal is displayed at the bottom of the cart.",
+        "The cart UI is styled consistently with the AuraFlora pastel design system."
       ]
     },
     {
-      "id": "REQ-11",
-      "text": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
+      "id": "REQ-15",
+      "text": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-8"
         ],
         "quotes": [
-          "in the footer remove the facebook and pinttrest logo",
-          "change the details overthere also as said above"
+          "so that they can buy stuff"
         ]
       },
       "acceptanceCriteria": [
-        "Footer contains no Facebook or Pinterest icons or links",
-        "Footer Instagram icon links to https://www.instagram.com/aura._.flora_/ and opens in a new tab",
-        "Footer email displays 'aurafloraaf@gmail.com' as a clickable mailto link",
-        "Footer location shows 'Mumbai'",
-        "Footer hours/availability text replaced with '24–48 hour response time'"
+        "A 'Checkout' or 'Place Order' button is present in the cart view.",
+        "Clicking it opens a minimal checkout form requesting name, email, and delivery address.",
+        "On form submission, a mailto: URI addressed to aurafloraaf@gmail.com is opened with order details pre-filled in the subject and body.",
+        "The checkout form is styled to match the AuraFlora pastel aesthetic.",
+        "A confirmation message is shown to the user after submission."
       ]
     },
     {
-      "id": "REQ-12",
-      "text": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
+      "id": "REQ-16",
+      "text": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6"
+          "msg-8"
         ],
         "quotes": [
-          "make it so that when somone enquires they send us a gmail to the account aurafloraaf@gmail.com"
+          "change the services page"
         ]
       },
       "acceptanceCriteria": [
-        "Submitting the contact form opens the user's email client with 'aurafloraaf@gmail.com' as the recipient",
-        "The pre-filled email subject and body include the submitted name, email address, and message",
-        "The success confirmation message is still shown after the form is submitted"
+        "The navbar link label is updated from 'Services' (or equivalent) to 'Products' or 'Shop'.",
+        "Clicking the navbar link smoothly scrolls to the ProductsSection."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-8"
+        ],
+        "quotes": [
+          "change the services page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer link previously labeled 'Services' is updated to 'Products' or 'Shop'.",
+        "The footer link scrolls to the ProductsSection anchor correctly."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/",
-    "Do not add any backend email service or third-party email API — use mailto: URI for form submission"
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui — these are immutable paths.",
+    "No backend payment processing or external e-commerce APIs may be used; checkout must use a mailto: URI approach.",
+    "Maintain the AuraFlora pastel design system (OKLCH tokens, Cormorant Garamond/Jost fonts, frosted-glass effects) across all new components."
   ],
   "nonGoals": [
-    "Adding any new sections or pages to the website",
-    "Changing the visual design, colour palette, or typography",
-    "Implementing server-side email sending or a backend mailer",
-    "Modifying the navbar or any section other than ContactSection and Footer"
+    "Real payment gateway integration (Stripe, PayPal, etc.).",
+    "Backend order management or database persistence.",
+    "User authentication or account management for purchases.",
+    "Inventory management or stock tracking."
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Elegant abstract pastel product placeholder — soft blush rose and champagne gold tones, botanical or floral abstract texture, square format (product-placeholder-1.dim_600x600.png)",
+      "Elegant abstract pastel product placeholder — lavender mist and sage green tones, botanical or floral abstract texture, square format (product-placeholder-2.dim_600x600.png)",
+      "Elegant abstract pastel product placeholder — champagne gold and blush rose tones, delicate petal motif, square format (product-placeholder-3.dim_600x600.png)",
+      "Elegant abstract pastel product placeholder — sage green and lavender mist tones, soft watercolour floral texture, square format (product-placeholder-4.dim_600x600.png)"
+    ],
     "edits": []
   }
 }

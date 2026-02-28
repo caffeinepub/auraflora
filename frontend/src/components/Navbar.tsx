@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
+import { useCart } from '../contexts/CartContext';
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
+  { label: 'Products', href: '#products' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -12,6 +13,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { totalItems, openCart } = useCart();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -65,23 +67,59 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, '#contact')}
-            className="hidden md:inline-flex items-center px-6 py-2.5 rounded-full border border-aura-rose/40 text-sm tracking-widest uppercase font-medium text-foreground/80 hover:bg-aura-rose/20 hover:border-aura-rose transition-all duration-300"
-          >
-            Enquire
-          </a>
+          {/* Right side: Cart + CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            {/* Cart button */}
+            <button
+              onClick={openCart}
+              className="relative p-2.5 rounded-full text-foreground/60 hover:text-foreground hover:bg-aura-rose/10 transition-all duration-300"
+              aria-label={`Open cart${totalItems > 0 ? `, ${totalItems} items` : ''}`}
+            >
+              <ShoppingBag size={20} />
+              {totalItems > 0 && (
+                <span
+                  className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full text-xs font-medium font-body flex items-center justify-center"
+                  style={{ backgroundColor: 'oklch(0.68 0.12 10)', color: 'white' }}
+                >
+                  {totalItems > 9 ? '9+' : totalItems}
+                </span>
+              )}
+            </button>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden p-2 text-foreground/70 hover:text-foreground transition-colors"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+            <a
+              href="#contact"
+              onClick={(e) => handleNavClick(e, '#contact')}
+              className="inline-flex items-center px-6 py-2.5 rounded-full border border-aura-rose/40 text-sm tracking-widest uppercase font-medium text-foreground/80 hover:bg-aura-rose/20 hover:border-aura-rose transition-all duration-300"
+            >
+              Enquire
+            </a>
+          </div>
+
+          {/* Mobile: Cart + Menu Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={openCart}
+              className="relative p-2 text-foreground/60 hover:text-foreground transition-colors"
+              aria-label={`Open cart${totalItems > 0 ? `, ${totalItems} items` : ''}`}
+            >
+              <ShoppingBag size={20} />
+              {totalItems > 0 && (
+                <span
+                  className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full text-xs font-medium font-body flex items-center justify-center"
+                  style={{ backgroundColor: 'oklch(0.68 0.12 10)', color: 'white', fontSize: '10px' }}
+                >
+                  {totalItems > 9 ? '9+' : totalItems}
+                </span>
+              )}
+            </button>
+            <button
+              className="p-2 text-foreground/70 hover:text-foreground transition-colors"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </div>
 

@@ -1,70 +1,130 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update contact details, footer, and wire enquiry form to Gmail",
+  "title": "Replace Services section with a shoppable Products section",
   "requirements": [
     {
-      "id": "REQ-9",
-      "summary": "Update ContactSection email, location, and response time details",
+      "id": "REQ-13",
+      "summary": "Replace the existing ServicesSection with a new ProductsSection component displaying a curated grid of luxury product cards with images, names, descriptions, prices, and Add to Cart buttons styled in the AuraFlora pastel palette",
       "acceptanceCriteria": [
-        "Email displayed in ContactSection is 'aurafloraaf@gmail.com' and clicking it opens the user's email client via mailto:aurafloraaf@gmail.com",
-        "Studio/location field shows 'Mumbai'",
-        "Hours/availability field is replaced with text indicating response time of 24–48 hours"
+        "The ServicesSection and ServiceCard components are replaced or repurposed as a ProductsSection with product cards.",
+        "Each product card displays a product image placeholder, name, short description, and price.",
+        "Each card has an 'Add to Cart' or 'Buy Now' button styled to match the AuraFlora pastel theme.",
+        "Cards use pastel-tinted backgrounds and hover animations consistent with the existing design system.",
+        "The section heading is updated to reflect 'Products', 'Shop', or similar label."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ContactSection.tsx",
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create a ProductCard component that displays a product image (using generated placeholders frontend/public/assets/generated/product-placeholder-1.dim_600x600.png through product-placeholder-4.dim_600x600.png), product name, short description, price, and an 'Add to Cart' button. Style with frosted-glass effects, pastel-tinted backgrounds, serif headings (Cormorant Garamond), and hover animations matching the existing ServiceCard design patterns. Include props for product data and an onAddToCart callback."
+        },
+        {
+          "path": "frontend/src/components/ProductsSection.tsx",
+          "operation": "create",
+          "description": "Create a ProductsSection component that renders a responsive grid of ProductCard components (minimum 4-6 products). Define a curated product catalog with sample botanical/floral luxury products including names, descriptions, and prices. Use the section header pattern from ServicesSection with a gradient background. Integrate the cart context to handle add-to-cart actions. Assign each product one of the four generated product placeholder images from frontend/public/assets/generated/."
+        },
+        {
+          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Replace the email text with 'aurafloraaf@gmail.com' wrapped in an anchor tag with href='mailto:aurafloraaf@gmail.com'. Update the studio/location text to display 'Mumbai'. Replace any hours or availability text with '24–48 hour response time' or similar wording that conveys we revert within 24–48 hours."
+          "description": "Replace the ServicesSection import and component usage with ProductsSection. Maintain the same position in the layout order between AboutSection and GallerySection to preserve the flow of the single-page design."
         }
       ]
     },
     {
-      "id": "REQ-10",
-      "summary": "Add Instagram link to ContactSection",
+      "id": "REQ-14",
+      "summary": "Implement a client-side shopping cart with add/remove functionality, quantity management, and a slide-out drawer UI styled in the AuraFlora pastel design system",
       "acceptanceCriteria": [
-        "An Instagram handle '@aura._.flora_' is visible in the ContactSection",
-        "Clicking it opens https://www.instagram.com/aura._.flora_/ in a new browser tab"
+        "Clicking 'Add to Cart' adds the product to a cart state managed in React.",
+        "A cart icon/button in the Navbar or page shows the current item count.",
+        "Opening the cart displays all added items with name, quantity, unit price, and a line total.",
+        "Users can increment, decrement, or remove items from the cart.",
+        "A subtotal is displayed at the bottom of the cart.",
+        "The cart UI is styled consistently with the AuraFlora pastel design system."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ContactSection.tsx",
+          "path": "frontend/src/contexts/CartContext.tsx",
+          "operation": "create",
+          "description": "Create a CartContext using React Context API to manage cart state globally. Implement cart operations: addToCart, removeFromCart, updateQuantity, clearCart, and calculate total. Define the Product and CartItem types. Persist cart state to localStorage for session continuity."
+        },
+        {
+          "path": "frontend/src/components/CartDrawer.tsx",
+          "operation": "create",
+          "description": "Create a CartDrawer component that renders a slide-out drawer overlay with a frosted-glass panel. Display cart items with product name, quantity controls (increment/decrement buttons), unit price, line total, and remove button. Show a subtotal at the bottom and a 'Checkout' button. Style with OKLCH pastel tokens, Cormorant Garamond headings, and smooth animations. Include a close button and backdrop click-to-close behavior."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
           "operation": "modify",
-          "description": "Add an Instagram contact detail displaying '@aura._.flora_' as an anchor tag with href='https://www.instagram.com/aura._.flora_/' and target='_blank' rel='noopener noreferrer'. Position it alongside the existing contact details (email, location, response time)."
+          "description": "Add a cart icon button to the Navbar (both desktop and mobile views) that displays the current cart item count as a badge. Wire the button to open the CartDrawer. Style the cart icon and badge to match the existing Navbar aesthetic with pastel accents on hover."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Wrap the App component with CartProvider to make cart state available throughout the application. Place it inside the existing QueryClientProvider and InternetIdentityProvider hierarchy."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the CartDrawer component at the root level of the App component so it can be opened from anywhere via the cart context. Position it to overlay the entire layout when active."
         }
       ]
     },
     {
-      "id": "REQ-11",
-      "summary": "Update Footer social icons and contact details",
+      "id": "REQ-15",
+      "summary": "Add a checkout flow with a form collecting customer name, email, and delivery address, then opening a pre-filled mailto: URI to aurafloraaf@gmail.com with order details",
       "acceptanceCriteria": [
-        "Footer contains no Facebook or Pinterest icons or links",
-        "Footer Instagram icon links to https://www.instagram.com/aura._.flora_/ and opens in a new tab",
-        "Footer email displays 'aurafloraaf@gmail.com' as a clickable mailto link",
-        "Footer location shows 'Mumbai'",
-        "Footer hours/availability text replaced with '24–48 hour response time'"
+        "A 'Checkout' or 'Place Order' button is present in the cart view.",
+        "Clicking it opens a minimal checkout form requesting name, email, and delivery address.",
+        "On form submission, a mailto: URI addressed to aurafloraaf@gmail.com is opened with order details pre-filled in the subject and body.",
+        "The checkout form is styled to match the AuraFlora pastel aesthetic.",
+        "A confirmation message is shown to the user after submission."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CheckoutForm.tsx",
+          "operation": "create",
+          "description": "Create a CheckoutForm component with input fields for customer name, email, and delivery address (street, city, postal code, country). Style inputs with the frosted-glass effect and pastel focus rings matching ContactSection. On form submission, construct a mailto: URI addressed to aurafloraaf@gmail.com with the subject 'AuraFlora Order' and body containing itemized order details (product names, quantities, prices, subtotal) plus customer information. Open the mailto link and display a confirmation message. Include form validation for required fields and email format."
+        },
+        {
+          "path": "frontend/src/components/CartDrawer.tsx",
+          "operation": "modify",
+          "description": "Replace the 'Checkout' button action to toggle display of the CheckoutForm component within the drawer (or transition to checkout view). Ensure the checkout form is presented with smooth animation and maintains the drawer's frosted-glass styling. After successful checkout submission, provide visual feedback and option to return to shopping."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Update the Navbar smooth-scroll link that previously pointed to the Services section to now point to the new Products section anchor",
+      "acceptanceCriteria": [
+        "The navbar link label is updated from 'Services' (or equivalent) to 'Products' or 'Shop'.",
+        "Clicking the navbar link smoothly scrolls to the ProductsSection."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Update the navigation link label from 'Services' to 'Products' or 'Shop'. Update the href attribute from '#services' to '#products' to match the new ProductsSection anchor ID. Verify smooth-scroll behavior is preserved for both desktop and mobile navigation."
+        },
+        {
+          "path": "frontend/src/components/ProductsSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the ProductsSection root element has id='products' to serve as the scroll anchor target for navigation links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor",
+      "acceptanceCriteria": [
+        "Footer link previously labeled 'Services' is updated to 'Products' or 'Shop'.",
+        "The footer link scrolls to the ProductsSection anchor correctly."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Remove Facebook and Pinterest social icon links entirely, keeping only the Instagram icon. Update the Instagram link to href='https://www.instagram.com/aura._.flora_/' with target='_blank' rel='noopener noreferrer'. Change the email in contact info to 'aurafloraaf@gmail.com' wrapped in a mailto: anchor. Update location to 'Mumbai'. Replace any hours/availability text with '24–48 hour response time'."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Wire contact form to open pre-filled mailto link on submission",
-      "acceptanceCriteria": [
-        "Submitting the contact form opens the user's email client with 'aurafloraaf@gmail.com' as the recipient",
-        "The pre-filled email subject and body include the submitted name, email address, and message",
-        "The success confirmation message is still shown after the form is submitted"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Modify the form submission handler to construct a mailto: URI using the submitted name, email, and message fields. Use encodeURIComponent to safely encode the subject and body. After constructing the mailto link (e.g., 'mailto:aurafloraaf@gmail.com?subject=Enquiry from [name]&body=[message content including name, email, message]'), open it using window.location.href or window.open. Keep the existing success confirmation logic so users see feedback after submission."
+          "description": "Update the footer navigation link label from 'Services' to 'Products' or 'Shop'. Update the href attribute from '#services' to '#products' to match the ProductsSection anchor. Ensure the smooth-scroll behavior is preserved."
         }
       ]
     }

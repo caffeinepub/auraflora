@@ -1,16 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Update the ContactSection and Footer with correct contact details, add an Instagram link, remove Facebook and Pinterest social icons, and wire the enquiry form to open a pre-filled Gmail via mailto.
+**Goal:** Replace the Services section with a shoppable Products section, add a client-side shopping cart, and implement a mailto-based checkout flow.
 
 **Planned changes:**
-- In ContactSection, update email to `aurafloraaf@gmail.com` as a clickable `mailto:` link
-- In ContactSection, replace studio/location text with "Mumbai"
-- In ContactSection, replace hours/availability text with "We revert within 24–48 hours"
-- In ContactSection, add a clickable Instagram handle `@aura._.flora_` linking to `https://www.instagram.com/aura._.flora_/` (opens in new tab)
-- In Footer, remove Facebook and Pinterest social icons/links entirely
-- In Footer, update Instagram link to `https://www.instagram.com/aura._.flora_/` (opens in new tab)
-- In Footer, update email to `aurafloraaf@gmail.com` as a `mailto:` link, location to "Mumbai", and hours text to "24–48 hour response time"
-- Wire the contact/enquiry form so submission opens the user's email client via a `mailto:` URI to `aurafloraaf@gmail.com`, pre-filled with the submitted name, email, and message; show success confirmation after submission
+- Replace `ServicesSection` with a new `ProductsSection` displaying 4–6 luxury product cards in the AuraFlora pastel design system, each with a product image, name, short description, price, and an "Add to Cart" / "Buy Now" button
+- Implement a client-side shopping cart (React state) with a slide-out drawer or modal showing item names, quantities, unit prices, line totals, and a subtotal; users can increment, decrement, or remove items
+- Add a cart icon with item count badge to the Navbar
+- Implement a checkout form (name, email, delivery address) that on submission opens a pre-filled `mailto:aurafloraaf@gmail.com` URI with order details, then shows a confirmation message
+- Update the Navbar smooth-scroll link from "Services" to "Products" / "Shop" pointing to the new section anchor
+- Update the Footer navigation link from "Services" to "Products" / "Shop" pointing to the new section anchor
 
-**User-visible outcome:** Visitors see updated contact details throughout the site, can click the email and Instagram links to interact directly, and submitting the enquiry form opens their email client with a pre-filled message addressed to AuraFlora's Gmail.
+**User-visible outcome:** Visitors can browse AuraFlora products, add them to a cart, review their cart, and place an order by filling in a simple form that opens their email client pre-filled with the order details.

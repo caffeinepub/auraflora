@@ -138,6 +138,21 @@
   .contact-input:focus {
     border-color: oklch(0.78 0.08 10 / 0.6);
   }
+
+  /* Checkout inputs — same style as contact inputs */
+  .checkout-input {
+    @apply w-full px-0 py-3 bg-transparent border-0 border-b text-foreground text-sm focus:outline-none transition-colors duration-300;
+    border-color: oklch(0.90 0.01 75);
+    font-family: 'Jost', sans-serif;
+  }
+
+  .checkout-input::placeholder {
+    color: oklch(0.22 0.02 30 / 0.25);
+  }
+
+  .checkout-input:focus {
+    border-color: oklch(0.78 0.08 10 / 0.6);
+  }
 }
 
 @layer utilities {

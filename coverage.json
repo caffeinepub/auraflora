@@ -1,57 +1,83 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T18:06:16.248Z",
+  "generatedAt": "2026-02-28T18:17:24.965Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 4,
-    "implemented": 4,
+    "total": 5,
+    "implemented": 5,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
+        "id": "REQ-13",
+        "summary": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ContactSection.tsx"
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/components/ProductsSection.tsx",
+          "frontend/src/App.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ContactSection.tsx"
+          "frontend/src/components/ProductCard.tsx",
+          "frontend/src/components/ProductsSection.tsx",
+          "frontend/src/App.tsx"
         ]
       },
       {
-        "id": "REQ-11",
-        "summary": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
+        "id": "REQ-14",
+        "summary": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/contexts/CartContext.tsx",
+          "frontend/src/components/CartDrawer.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/main.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/contexts/CartContext.tsx",
+          "frontend/src/components/CartDrawer.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-15",
+        "summary": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CheckoutForm.tsx",
+          "frontend/src/components/CartDrawer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CheckoutForm.tsx",
+          "frontend/src/components/CartDrawer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-16",
+        "summary": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/ProductsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/ProductsSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-17",
+        "summary": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/Footer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ContactSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ContactSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-9",
-        "summary": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/ContactSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/ContactSection.tsx"
         ]
       }
     ]
@@ -61,8 +87,21 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/ContactSection.tsx",
+    "frontend/public/assets/generated/product-placeholder-1.dim_600x600.png",
+    "frontend/public/assets/generated/product-placeholder-2.dim_600x600.png",
+    "frontend/public/assets/generated/product-placeholder-3.dim_600x600.png",
+    "frontend/public/assets/generated/product-placeholder-4.dim_600x600.png",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CartDrawer.tsx",
+    "frontend/src/components/CheckoutForm.tsx",
     "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/components/ProductsSection.tsx",
+    "frontend/src/components/ServiceCard.tsx",
+    "frontend/src/components/ServicesSection.tsx",
+    "frontend/src/contexts/CartContext.tsx",
+    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
