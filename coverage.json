@@ -1,31 +1,68 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T12:54:38.750Z",
+  "generatedAt": "2026-02-28T18:06:16.248Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 0,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-9",
-        "summary": "Update the contact details displayed in the ContactSection component (studio address, phone number, email, and any other contact info fields) to the new values provided by the user in the next message. Keep the existing layout, styling, and form intact — only the displayed contact information text should change.",
-        "status": "missing",
+        "id": "REQ-10",
+        "summary": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
+        "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/ContactSection.tsx"
         ],
-        "matchedFiles": []
+        "matchedFiles": [
+          "frontend/src/components/ContactSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ContactSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ContactSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ContactSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ContactSection.tsx"
+        ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
+    "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/Footer.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

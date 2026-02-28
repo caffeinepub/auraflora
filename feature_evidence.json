@@ -1,4 +1,77 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-in-the-contactsection-make-the-email-address-aurafloraaf-gmail-com-an-interactable-mailto-link-mailto-aurafloraaf-gmail-com-replace-the-studio-location-text-with-mumbai-replace-any-hours-or-availability-text-with-a-response-time-notice-such-as-we-revert-within-24-48-hours",
+      "featureTitle": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
+      "files": [
+        "frontend/src/components/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-contactsection-add-an-interactable-instagram-link-displaying-aura-flora-that-opens-https-www-instagram-com-aura-flora-in-a-new-tab",
+      "featureTitle": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
+      "files": [
+        "frontend/src/components/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-in-the-footer-component-remove-the-facebook-and-pinterest-social-icons-links-entirely-keep-only-the-instagram-icon-link-and-update-it-to-point-to-https-www-instagram-com-aura-flora-opening-in-a-new-tab-update-all-contact-details-in-the-footer-to-match-email-aurafloraaf-gmail-com-as-a-mailto-link-location-mumbai-and-replace-any-hours-text-with-24-48-hour-response-time",
+      "featureTitle": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
+      "files": [
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-wire-the-enquiry-contact-form-so-that-on-submission-it-composes-and-opens-a-mailto-link-to-aurafloraaf-gmail-com-pre-filled-with-the-submitted-name-email-and-message-as-the-email-body-and-subject-this-should-use-a-mailto-uri-approach-since-no-backend-email-service-is-available",
+      "featureTitle": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
+      "files": [
+        "frontend/src/components/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

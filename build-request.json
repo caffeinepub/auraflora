@@ -1,37 +1,95 @@
 {
   "kind": "build_request",
-  "title": "Update contact details in the Contact section",
+  "title": "Update contact details, footer, and wire enquiry form to Gmail",
   "projectName": "AuraFlora",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-9",
-      "text": "Update the contact details displayed in the ContactSection component (studio address, phone number, email, and any other contact info fields) to the new values provided by the user in the next message. Keep the existing layout, styling, and form intact — only the displayed contact information text should change.",
+      "text": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-6"
         ],
         "quotes": [
-          "Please change the contact details to what i say"
+          "change the email to become interactable and make it as aurafloraaf@gmail.com",
+          "studio to jus mumbai",
+          "change the hours part and add reverts timings between upto 24-48hours"
         ]
       },
       "acceptanceCriteria": [
-        "The ContactSection displays the user-specified contact details (address, email, phone, or other fields as provided).",
-        "All existing form fields (name, email, message) and submit button remain unchanged.",
-        "The AuraFlora pastel styling and layout of the contact section are preserved.",
-        "No other sections are affected by this change."
+        "Email displayed in ContactSection is 'aurafloraaf@gmail.com' and clicking it opens the user's email client via mailto:aurafloraaf@gmail.com",
+        "Studio/location field shows 'Mumbai'",
+        "Hours/availability field is replaced with text indicating response time of 24–48 hours"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "add our instagram page also interactable which is aura._.flora_"
+        ]
+      },
+      "acceptanceCriteria": [
+        "An Instagram handle '@aura._.flora_' is visible in the ContactSection",
+        "Clicking it opens https://www.instagram.com/aura._.flora_/ in a new browser tab"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "in the footer remove the facebook and pinttrest logo",
+          "change the details overthere also as said above"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer contains no Facebook or Pinterest icons or links",
+        "Footer Instagram icon links to https://www.instagram.com/aura._.flora_/ and opens in a new tab",
+        "Footer email displays 'aurafloraaf@gmail.com' as a clickable mailto link",
+        "Footer location shows 'Mumbai'",
+        "Footer hours/availability text replaced with '24–48 hour response time'"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "make it so that when somone enquires they send us a gmail to the account aurafloraaf@gmail.com"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submitting the contact form opens the user's email client with 'aurafloraaf@gmail.com' as the recipient",
+        "The pre-filled email subject and body include the submitted name, email address, and message",
+        "The success confirmation message is still shown after the form is submitted"
       ]
     }
   ],
   "constraints": [
-    "Only update the contact information text values — do not alter the contact form logic, styling, or layout.",
-    "Do not modify any immutable frontend paths."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Do not add any backend email service or third-party email API — use mailto: URI for form submission"
   ],
   "nonGoals": [
-    "Redesigning the contact section layout or form.",
-    "Adding new form fields or backend form submission logic.",
-    "Changing any other section of the website."
+    "Adding any new sections or pages to the website",
+    "Changing the visual design, colour palette, or typography",
+    "Implementing server-side email sending or a backend mailer",
+    "Modifying the navbar or any section other than ContactSection and Footer"
   ],
   "imageRequirements": {
     "required": [],

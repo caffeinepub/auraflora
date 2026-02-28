@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { SiInstagram } from 'react-icons/si';
+
+const RECIPIENT_EMAIL = 'aurafloraaf@gmail.com';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -12,10 +15,18 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+
+    const subject = encodeURIComponent(`Enquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
+      window.location.href = mailtoLink;
       setLoading(false);
       setSubmitted(true);
-    }, 1200);
+    }, 800);
   };
 
   return (
@@ -48,16 +59,43 @@ export default function ContactSection() {
 
             {/* Contact details */}
             <div className="space-y-4">
-              {[
-                { label: 'Email', value: 'hello@auraflora.com' },
-                { label: 'Studio', value: 'London · Paris · New York' },
-                { label: 'Hours', value: 'Mon–Fri, 9am–6pm' },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5">{item.label}</span>
-                  <span className="font-body text-sm text-foreground/60">{item.value}</span>
-                </div>
-              ))}
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5">Email</span>
+                <a
+                  href={`mailto:${RECIPIENT_EMAIL}`}
+                  className="font-body text-sm text-foreground/60 hover:text-aura-rose transition-colors duration-300 underline underline-offset-2"
+                >
+                  {RECIPIENT_EMAIL}
+                </a>
+              </div>
+
+              {/* Studio */}
+              <div className="flex items-start gap-4">
+                <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5">Studio</span>
+                <span className="font-body text-sm text-foreground/60">Mumbai</span>
+              </div>
+
+              {/* Response time */}
+              <div className="flex items-start gap-4">
+                <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5">Reverts</span>
+                <span className="font-body text-sm text-foreground/60">We respond within 24–48 hours</span>
+              </div>
+
+              {/* Instagram */}
+              <div className="flex items-start gap-4">
+                <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5 flex items-center gap-1">
+                  <SiInstagram size={12} />
+                </span>
+                <a
+                  href="https://www.instagram.com/aura._.flora_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-foreground/60 hover:text-aura-rose transition-colors duration-300 underline underline-offset-2"
+                >
+                  @aura._.flora_
+                </a>
+              </div>
             </div>
           </div>
 
@@ -70,7 +108,7 @@ export default function ContactSection() {
                   Thank you
                 </h3>
                 <p className="font-body text-base text-foreground/55 max-w-xs leading-relaxed">
-                  Your message has been received. We'll be in touch within 24 hours.
+                  Your enquiry has been sent. We'll be in touch within 24–48 hours.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', message: '' }); }}
@@ -141,7 +179,7 @@ export default function ContactSection() {
                       Sending...
                     </>
                   ) : (
-                    'Send Message'
+                    'Send Enquiry'
                   )}
                 </button>
               </form>

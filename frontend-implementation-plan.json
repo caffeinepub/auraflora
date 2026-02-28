@@ -1,22 +1,70 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update contact details in the Contact section",
+  "title": "Update contact details, footer, and wire enquiry form to Gmail",
   "requirements": [
     {
       "id": "REQ-9",
-      "summary": "Update the contact information text (address, phone, email) displayed in the ContactSection component to the new user-provided values while preserving the existing layout, styling, and form",
+      "summary": "Update ContactSection email, location, and response time details",
       "acceptanceCriteria": [
-        "The ContactSection displays the user-specified contact details (address, email, phone, or other fields as provided).",
-        "All existing form fields (name, email, message) and submit button remain unchanged.",
-        "The AuraFlora pastel styling and layout of the contact section are preserved.",
-        "No other sections are affected by this change."
+        "Email displayed in ContactSection is 'aurafloraaf@gmail.com' and clicking it opens the user's email client via mailto:aurafloraaf@gmail.com",
+        "Studio/location field shows 'Mumbai'",
+        "Hours/availability field is replaced with text indicating response time of 24–48 hours"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ContactSection.tsx",
           "operation": "modify",
-          "description": "Update the static contact information text (studio address, phone number, email) displayed in the ContactSection component to the new values that will be provided by the user. Keep all existing form logic, controlled inputs, submission handler, loading states, and styling intact. Only modify the hardcoded contact detail strings in the contact information display area."
+          "description": "Replace the email text with 'aurafloraaf@gmail.com' wrapped in an anchor tag with href='mailto:aurafloraaf@gmail.com'. Update the studio/location text to display 'Mumbai'. Replace any hours or availability text with '24–48 hour response time' or similar wording that conveys we revert within 24–48 hours."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add Instagram link to ContactSection",
+      "acceptanceCriteria": [
+        "An Instagram handle '@aura._.flora_' is visible in the ContactSection",
+        "Clicking it opens https://www.instagram.com/aura._.flora_/ in a new browser tab"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Add an Instagram contact detail displaying '@aura._.flora_' as an anchor tag with href='https://www.instagram.com/aura._.flora_/' and target='_blank' rel='noopener noreferrer'. Position it alongside the existing contact details (email, location, response time)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Update Footer social icons and contact details",
+      "acceptanceCriteria": [
+        "Footer contains no Facebook or Pinterest icons or links",
+        "Footer Instagram icon links to https://www.instagram.com/aura._.flora_/ and opens in a new tab",
+        "Footer email displays 'aurafloraaf@gmail.com' as a clickable mailto link",
+        "Footer location shows 'Mumbai'",
+        "Footer hours/availability text replaced with '24–48 hour response time'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Remove Facebook and Pinterest social icon links entirely, keeping only the Instagram icon. Update the Instagram link to href='https://www.instagram.com/aura._.flora_/' with target='_blank' rel='noopener noreferrer'. Change the email in contact info to 'aurafloraaf@gmail.com' wrapped in a mailto: anchor. Update location to 'Mumbai'. Replace any hours/availability text with '24–48 hour response time'."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Wire contact form to open pre-filled mailto link on submission",
+      "acceptanceCriteria": [
+        "Submitting the contact form opens the user's email client with 'aurafloraaf@gmail.com' as the recipient",
+        "The pre-filled email subject and body include the submitted name, email address, and message",
+        "The success confirmation message is still shown after the form is submitted"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Modify the form submission handler to construct a mailto: URI using the submitted name, email, and message fields. Use encodeURIComponent to safely encode the subject and body. After constructing the mailto link (e.g., 'mailto:aurafloraaf@gmail.com?subject=Enquiry from [name]&body=[message content including name, email, message]'), open it using window.location.href or window.open. Keep the existing success confirmation logic so users see feedback after submission."
         }
       ]
     }

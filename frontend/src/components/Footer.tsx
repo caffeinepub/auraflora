@@ -1,4 +1,4 @@
-import { SiInstagram, SiFacebook, SiPinterest } from 'react-icons/si';
+import { SiInstagram } from 'react-icons/si';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -62,27 +62,32 @@ export default function Footer() {
             <h4 className="text-xs tracking-[0.3em] uppercase font-medium text-aura-footer-fg/40 mb-6">
               Connect
             </h4>
+
+            {/* Instagram only */}
             <div className="flex gap-4 mb-8">
-              {[
-                { Icon: SiInstagram, label: 'Instagram', href: '#' },
-                { Icon: SiFacebook, label: 'Facebook', href: '#' },
-                { Icon: SiPinterest, label: 'Pinterest', href: '#' },
-              ].map(({ Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="w-10 h-10 rounded-full border border-aura-footer-fg/15 flex items-center justify-center text-aura-footer-fg/50 hover:text-aura-footer-fg hover:border-aura-rose/50 transition-all duration-300 hover:bg-aura-rose/10"
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/aura._.flora_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="w-10 h-10 rounded-full border border-aura-footer-fg/15 flex items-center justify-center text-aura-footer-fg/50 hover:text-aura-footer-fg hover:border-aura-rose/50 transition-all duration-300 hover:bg-aura-rose/10"
+              >
+                <SiInstagram size={16} />
+              </a>
             </div>
-            <p className="text-sm text-aura-footer-fg/50 font-body">
-              hello@auraflora.com
+
+            {/* Contact details */}
+            <a
+              href="mailto:aurafloraaf@gmail.com"
+              className="text-sm text-aura-footer-fg/50 font-body hover:text-aura-rose transition-colors duration-300 block"
+            >
+              aurafloraaf@gmail.com
+            </a>
+            <p className="text-sm text-aura-footer-fg/50 font-body mt-1">
+              Mumbai
             </p>
             <p className="text-sm text-aura-footer-fg/50 font-body mt-1">
-              London · Paris · New York
+              Reverts within 24–48 hours
             </p>
           </div>
         </div>
