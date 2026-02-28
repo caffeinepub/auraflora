@@ -1,0 +1,158 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-visually-striking-hero-section-with-the-auraflora-brand-name-a-refined-tagline-and-a-full-viewport-abstract-background-that-blends-soft-pastel-tones-such-as-blush-rose-lavender-mist-sage-green-and-champagne-gold-the-layout-should-feel-elevated-and-editorial",
+      "featureTitle": "Create a visually striking hero section with the AuraFlora brand name, a refined tagline, and a full-viewport abstract background that blends soft pastel tones (such as blush rose, lavender mist, sage green, and champagne gold). The layout should feel elevated and editorial.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-an-about-section-describing-auraflora-as-a-premium-brand-the-section-should-use-asymmetric-layout-with-pastel-accent-shapes-or-watercolour-style-decorative-elements-conveying-exclusivity-and-artistry",
+      "featureTitle": "Build an 'About' section describing AuraFlora as a premium brand. The section should use asymmetric layout with pastel accent shapes or watercolour-style decorative elements, conveying exclusivity and artistry.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/AboutSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-services-or-offerings-section-showcasing-3-4-sample-luxury-service-cards-for-auraflora-each-card-should-have-a-pastel-tinted-background-unique-to-it-elegant-hover-effects-and-use-refined-iconography-or-abstract-illustrations",
+      "featureTitle": "Create a 'Services' or 'Offerings' section showcasing 3–4 sample luxury service cards for AuraFlora. Each card should have a pastel-tinted background unique to it, elegant hover effects, and use refined iconography or abstract illustrations.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ServiceCard.tsx",
+        "frontend/src/components/ServicesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-gallery-or-featured-showcase-section-with-a-grid-or-masonry-layout-displaying-abstract-pastel-imagery-placeholders-this-section-should-reinforce-the-high-end-artistic-brand-identity-of-auraflora",
+      "featureTitle": "Add a gallery or featured showcase section with a grid or masonry layout displaying abstract pastel imagery placeholders. This section should reinforce the high-end, artistic brand identity of AuraFlora.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/GallerySection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-contact-or-get-in-touch-section-with-a-minimal-elegant-form-name-email-message-fields-and-a-submit-button-styled-to-match-the-auraflora-pastel-theme",
+      "featureTitle": "Build a contact or 'Get in Touch' section with a minimal, elegant form (name, email, message fields) and a submit button styled to match the AuraFlora pastel theme.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-sticky-navigation-bar-with-the-auraflora-logo-wordmark-and-smooth-scroll-links-to-all-sections-the-navbar-should-be-translucent-with-a-frosted-glass-or-soft-pastel-blur-effect-to-maintain-the-abstract-premium-aesthetic",
+      "featureTitle": "Design a sticky navigation bar with the AuraFlora logo/wordmark and smooth-scroll links to all sections. The navbar should be translucent with a frosted-glass or soft pastel blur effect to maintain the abstract, premium aesthetic.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navbar.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-footer-with-the-auraflora-name-brief-brand-descriptor-social-media-placeholder-links-and-copyright-text-style-it-with-a-deep-or-contrasting-pastel-tone-to-complete-the-page",
+      "featureTitle": "Add a footer with the AuraFlora name, brief brand descriptor, social media placeholder links, and copyright text. Style it with a deep or contrasting pastel tone to complete the page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-global-design-system-across-the-entire-auraflora-website-a-curated-pastel-palette-blush-rose-lavender-sage-champagne-gold-serif-or-high-fashion-display-fonts-for-headings-clean-sans-serif-for-body-generous-whitespace-and-subtle-abstract-decorative-elements-floating-blobs-soft-gradients-translucent-overlays-to-achieve-a-high-class-abstract-visual-identity",
+      "featureTitle": "Apply a cohesive global design system across the entire AuraFlora website: a curated pastel palette (blush rose, lavender, sage, champagne/gold), serif or high-fashion display fonts for headings, clean sans-serif for body, generous whitespace, and subtle abstract decorative elements (floating blobs, soft gradients, translucent overlays) to achieve a high-class, abstract visual identity.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

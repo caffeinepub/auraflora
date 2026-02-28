@@ -1,0 +1,185 @@
+{
+  "kind": "build_request",
+  "title": "AuraFlora Business Website with High-Class Pastel Abstract Theme",
+  "projectName": "AuraFlora",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a visually striking hero section with the AuraFlora brand name, a refined tagline, and a full-viewport abstract background that blends soft pastel tones (such as blush rose, lavender mist, sage green, and champagne gold). The layout should feel elevated and editorial.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "build me a website of a business called AuraFlora",
+          "themed a blend of unique pastel colours making the website seem high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section spans the full viewport height",
+        "AuraFlora brand name is prominently displayed with elegant typography",
+        "Background blends at least 3 distinct pastel colours in an abstract gradient or artistic pattern",
+        "Section includes a short refined tagline and a call-to-action button"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build an 'About' section describing AuraFlora as a premium brand. The section should use asymmetric layout with pastel accent shapes or watercolour-style decorative elements, conveying exclusivity and artistry.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section is visually distinct from the hero with a different pastel palette accent",
+        "Layout uses asymmetry or offset columns for an abstract, editorial feel",
+        "Decorative abstract shapes or colour blobs are present as design elements"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a 'Services' or 'Offerings' section showcasing 3–4 sample luxury service cards for AuraFlora. Each card should have a pastel-tinted background unique to it, elegant hover effects, and use refined iconography or abstract illustrations.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "At least 3 service/offering cards are displayed",
+        "Each card uses a distinct pastel tint from the brand palette",
+        "Cards have smooth hover transitions (e.g., subtle scale, shadow, or colour shift)",
+        "Typography is elegant and consistent across all cards"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a gallery or featured showcase section with a grid or masonry layout displaying abstract pastel imagery placeholders. This section should reinforce the high-end, artistic brand identity of AuraFlora.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "unique pastel colours",
+          "abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery section displays at least 4–6 visual placeholders or generated images in a grid or masonry layout",
+        "Each image/placeholder uses the pastel brand colour palette",
+        "Section has a clean section heading and consistent spacing"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build a contact or 'Get in Touch' section with a minimal, elegant form (name, email, message fields) and a submit button styled to match the AuraFlora pastel theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "high classed"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact form includes name, email, and message fields",
+        "Form styling matches the overall pastel high-class aesthetic",
+        "Submit button uses a pastel accent colour with a refined hover effect",
+        "Section has appropriate heading and descriptive subtext"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Design a sticky navigation bar with the AuraFlora logo/wordmark and smooth-scroll links to all sections. The navbar should be translucent with a frosted-glass or soft pastel blur effect to maintain the abstract, premium aesthetic.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navbar sticks to the top of the viewport on scroll",
+        "Includes AuraFlora wordmark or logo on the left",
+        "Navigation links scroll smoothly to corresponding sections",
+        "Navbar uses frosted-glass or soft semi-transparent pastel background"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a footer with the AuraFlora name, brief brand descriptor, social media placeholder links, and copyright text. Style it with a deep or contrasting pastel tone to complete the page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer contains brand name, descriptor, and copyright notice",
+        "Includes placeholder social links styled consistently",
+        "Footer colour contrasts tastefully with the rest of the page while remaining within the pastel palette"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Apply a cohesive global design system across the entire AuraFlora website: a curated pastel palette (blush rose, lavender, sage, champagne/gold), serif or high-fashion display fonts for headings, clean sans-serif for body, generous whitespace, and subtle abstract decorative elements (floating blobs, soft gradients, translucent overlays) to achieve a high-class, abstract visual identity.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "blend of unique pastel colours making the website seem high classed and abstract"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections share a consistent pastel colour palette of at least 4 tones",
+        "Headings use an elegant serif or display typeface throughout",
+        "Decorative abstract elements (blobs, gradients, overlays) appear in at least 3 sections",
+        "Whitespace usage gives the site a premium, uncluttered feel",
+        "Design feels cohesive from top to bottom"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not use blue or purple as primary palette colours",
+    "All content must be in English",
+    "No backend data persistence is needed; this is a presentational business website",
+    "Do not edit any files listed under frontend.immutablePaths"
+  ],
+  "nonGoals": [
+    "E-commerce or payment functionality",
+    "User authentication or login",
+    "CMS or editable content management",
+    "Real contact form submission or email integration",
+    "Blog or editorial content system"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract watercolour-style hero background blending blush rose, lavender mist, sage green, and champagne tones with soft flowing shapes (auraflora-hero-bg.dim_1920x1080.png)",
+      "Soft pastel abstract blob decorative element in blush pink and lavender for section backgrounds (auraflora-blob-accent.dim_800x800.png)",
+      "Elegant AuraFlora wordmark logo on a transparent background using a refined serif typeface in muted champagne gold (auraflora-logo.dim_400x120.png)",
+      "Abstract pastel gallery tile 1 — soft sage and champagne swirl texture (auraflora-gallery-1.dim_600x600.png)",
+      "Abstract pastel gallery tile 2 — blush rose and lavender flowing forms (auraflora-gallery-2.dim_600x600.png)",
+      "Abstract pastel gallery tile 3 — champagne gold and ivory geometric softness (auraflora-gallery-3.dim_600x600.png)",
+      "Abstract pastel gallery tile 4 — sage green and blush watercolour wash (auraflora-gallery-4.dim_600x600.png)"
+    ],
+    "edits": []
+  }
+}

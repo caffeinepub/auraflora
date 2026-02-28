@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+
+    /* AuraFlora Pastel Palette — OKLCH */
+    /* Blush Rose */
+    --aura-rose-l: 0.78;
+    --aura-rose-c: 0.08;
+    --aura-rose-h: 10;
+
+    /* Lavender Mist */
+    --aura-lavender-l: 0.80;
+    --aura-lavender-c: 0.07;
+    --aura-lavender-h: 295;
+
+    /* Sage Green */
+    --aura-sage-l: 0.82;
+    --aura-sage-c: 0.06;
+    --aura-sage-h: 155;
+
+    /* Champagne Gold */
+    --aura-champagne-l: 0.88;
+    --aura-champagne-c: 0.06;
+    --aura-champagne-h: 75;
+
+    /* Semantic tokens */
+    --background: 0.98 0.005 75;
+    --foreground: 0.22 0.02 30;
+    --card: 0.97 0.008 75;
+    --card-foreground: 0.22 0.02 30;
+    --popover: 0.97 0.008 75;
+    --popover-foreground: 0.22 0.02 30;
+    --primary: 0.78 0.08 10;
+    --primary-foreground: 0.98 0.005 75;
+    --secondary: 0.80 0.07 295;
+    --secondary-foreground: 0.22 0.02 30;
+    --muted: 0.94 0.01 75;
+    --muted-foreground: 0.55 0.02 30;
+    --accent: 0.82 0.06 155;
+    --accent-foreground: 0.22 0.02 30;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.90 0.01 75;
+    --input: 0.90 0.01 75;
+    --ring: 0.78 0.08 10;
+
+    /* Chart */
+    --chart-1: 0.78 0.08 10;
+    --chart-2: 0.80 0.07 295;
+    --chart-3: 0.82 0.06 155;
+    --chart-4: 0.88 0.06 75;
+    --chart-5: 0.75 0.09 340;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.008 75;
+    --sidebar-foreground: 0.22 0.02 30;
+    --sidebar-primary: 0.78 0.08 10;
+    --sidebar-primary-foreground: 0.98 0.005 75;
+    --sidebar-accent: 0.94 0.01 75;
+    --sidebar-accent-foreground: 0.22 0.02 30;
+    --sidebar-border: 0.90 0.01 75;
+    --sidebar-ring: 0.78 0.08 10;
+  }
+
+  .dark {
+    --background: 0.16 0.015 30;
+    --foreground: 0.94 0.01 75;
+    --card: 0.20 0.015 30;
+    --card-foreground: 0.94 0.01 75;
+    --popover: 0.20 0.015 30;
+    --popover-foreground: 0.94 0.01 75;
+    --primary: 0.78 0.08 10;
+    --primary-foreground: 0.16 0.015 30;
+    --secondary: 0.80 0.07 295;
+    --secondary-foreground: 0.16 0.015 30;
+    --muted: 0.25 0.015 30;
+    --muted-foreground: 0.65 0.02 75;
+    --accent: 0.82 0.06 155;
+    --accent-foreground: 0.16 0.015 30;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.16 0.015 30;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.78 0.08 10;
+    --sidebar: 0.20 0.015 30;
+    --sidebar-foreground: 0.94 0.01 75;
+    --sidebar-primary: 0.78 0.08 10;
+    --sidebar-primary-foreground: 0.94 0.01 75;
+    --sidebar-accent: 0.25 0.015 30;
+    --sidebar-accent-foreground: 0.94 0.01 75;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.78 0.08 10;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Navbar frosted glass */
+  .navbar-scrolled {
+    background: oklch(0.98 0.005 75 / 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid oklch(0.78 0.08 10 / 0.1);
+  }
+
+  /* Contact inputs — placeholder handled via plain CSS to avoid @apply opacity modifier issues */
+  .contact-input {
+    @apply w-full px-0 py-3 bg-transparent border-0 border-b text-foreground text-sm focus:outline-none transition-colors duration-300;
+    border-color: oklch(0.90 0.01 75);
+    font-family: 'Jost', sans-serif;
+    resize: none;
+  }
+
+  .contact-input::placeholder {
+    color: oklch(0.22 0.02 30 / 0.25);
+  }
+
+  .contact-input:focus {
+    border-color: oklch(0.78 0.08 10 / 0.6);
+  }
+}
+
+@layer utilities {
+  /* Font families */
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Jost', sans-serif;
+  }
+
+  /* AuraFlora brand colours */
+  .text-aura-rose {
+    color: oklch(0.68 0.12 10);
+  }
+
+  .text-aura-lavender {
+    color: oklch(0.72 0.10 295);
+  }
+
+  .text-aura-lavender-deep {
+    color: oklch(0.62 0.12 295);
+  }
+
+  .text-aura-sage {
+    color: oklch(0.60 0.10 155);
+  }
+
+  .text-aura-champagne {
+    color: oklch(0.78 0.09 75);
+  }
+
+  .bg-aura-rose {
+    background-color: oklch(0.78 0.08 10);
+  }
+
+  .bg-aura-lavender {
+    background-color: oklch(0.80 0.07 295);
+  }
+
+  .bg-aura-sage {
+    background-color: oklch(0.82 0.06 155);
+  }
+
+  .bg-aura-champagne {
+    background-color: oklch(0.88 0.06 75);
+  }
+
+  /* Card backgrounds */
+  .bg-aura-rose-card {
+    background-color: oklch(0.95 0.025 10);
+  }
+
+  .bg-aura-sage-card {
+    background-color: oklch(0.95 0.020 155);
+  }
+
+  .bg-aura-lavender-card {
+    background-color: oklch(0.95 0.022 295);
+  }
+
+  .bg-aura-champagne-card {
+    background-color: oklch(0.96 0.020 75);
+  }
+
+  /* Footer */
+  .bg-aura-footer {
+    background-color: oklch(0.24 0.025 30);
+  }
+
+  .text-aura-footer-fg {
+    color: oklch(0.90 0.01 75);
+  }
+
+  /* Hero overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      oklch(0.16 0.015 30 / 0.3) 0%,
+      oklch(0.16 0.015 30 / 0.15) 40%,
+      oklch(0.16 0.015 30 / 0.5) 100%
+    );
+  }
+
+  /* Shadows */
+  .shadow-soft {
+    box-shadow: 0 4px 30px oklch(0.22 0.02 30 / 0.06);
+  }
+
+  .shadow-card {
+    box-shadow: 0 20px 60px oklch(0.22 0.02 30 / 0.12);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 8px 30px oklch(0.78 0.08 10 / 0.35);
+  }
+
+  /* Animations */
+  @keyframes float-slow {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+
+  @keyframes float-medium {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.03); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .animate-float-medium {
+    animation: float-medium 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2.5s ease-in-out infinite;
+  }
+}
