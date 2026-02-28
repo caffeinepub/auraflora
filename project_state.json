@@ -1,13 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Website for a business called AuraFlora, themed with unique pastel colours to feel high-classed and abstract.",
   "architectural_notes": [
     "Use a blend of unique pastel colours throughout the design to convey a high-class, abstract feel"
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Abstract watercolour-style hero background blending blush rose, lavender mist, sage green, and champagne tones with soft flowing shapes (auraflora-hero-bg.dim_1920x1080.png)\n- Soft pastel abstract blob decorative element in blush pink and lavender for section backgrounds (auraflora-blob-accent.dim_800x800.png)\n- Elegant AuraFlora wordmark logo on a transparent background using a refined serif typeface in muted champagne gold (auraflora-logo.dim_400x120.png)\n- Abstract pastel gallery tile 1 — soft sage and champagne swirl texture (auraflora-gallery-1.dim_600x600.png)\n- Abstract pastel gallery tile 2 — blush rose and lavender flowing forms (auraflora-gallery-2.dim_600x600.png)\n- Abstract pastel gallery tile 3 — champagne gold and ivory geometric softness (auraflora-gallery-3.dim_600x600.png)\n- Abstract pastel gallery tile 4 — sage green and blush watercolour wash (auraflora-gallery-4.dim_600x600.png)",
   "existing_features": [
     {
       "id": "feature-create-a-visually-striking-hero-section-with-the-auraflora-brand-name-a-refined-tagline-and-a-full-viewport-abstract-background-that-blends-soft-pastel-tones-such-as-blush-rose-lavender-mist-sage-green-and-champagne-gold-the-layout-should-feel-elevated-and-editorial",
@@ -79,6 +78,20 @@
       "id": "AR-1",
       "summary": "AuraFlora business website with pastel colour theme, high-class and abstract aesthetic",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update contact details in the contact section to user-specified information",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Update the contact details displayed in the ContactSection component (studio address, phone number, email, and any other contact info fields) to the new values provided by the user in the next message. Keep the existing layout, styling, and form intact — only the displayed contact information text should change.",
+      "reqIds": [
+        "REQ-9"
+      ],
       "status": "pending"
     }
   ],

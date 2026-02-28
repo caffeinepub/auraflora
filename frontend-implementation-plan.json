@@ -1,184 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "AuraFlora Business Website with High-Class Pastel Abstract Theme",
+  "title": "Update contact details in the Contact section",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Create a visually striking hero section with AuraFlora branding, tagline, and full-viewport abstract pastel background",
+      "id": "REQ-9",
+      "summary": "Update the contact information text (address, phone, email) displayed in the ContactSection component to the new user-provided values while preserving the existing layout, styling, and form",
       "acceptanceCriteria": [
-        "Hero section spans the full viewport height",
-        "AuraFlora brand name is prominently displayed with elegant typography",
-        "Background blends at least 3 distinct pastel colours in an abstract gradient or artistic pattern",
-        "Section includes a short refined tagline and a call-to-action button"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "create",
-          "description": "Create hero section component with full-viewport height, elegant AuraFlora branding, refined tagline, and CTA button. Use the generated image frontend/public/assets/generated/auraflora-hero-bg.dim_1920x1080.png as the background. Include the AuraFlora logo from frontend/public/assets/generated/auraflora-logo.dim_400x120.png."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render HeroSection component as the first section of the page"
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Build an About section with asymmetric layout, pastel accents, and watercolour-style decorative elements",
-      "acceptanceCriteria": [
-        "About section is visually distinct from the hero with a different pastel palette accent",
-        "Layout uses asymmetry or offset columns for an abstract, editorial feel",
-        "Decorative abstract shapes or colour blobs are present as design elements"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "create",
-          "description": "Create About section component with asymmetric layout describing AuraFlora as a premium brand. Include decorative abstract elements using the generated image frontend/public/assets/generated/auraflora-blob-accent.dim_800x800.png as an accent overlay or background element."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render AboutSection component after the hero section"
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Create a Services section showcasing 3–4 luxury service cards with distinct pastel backgrounds and elegant hover effects",
-      "acceptanceCriteria": [
-        "At least 3 service/offering cards are displayed",
-        "Each card uses a distinct pastel tint from the brand palette",
-        "Cards have smooth hover transitions (e.g., subtle scale, shadow, or colour shift)",
-        "Typography is elegant and consistent across all cards"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ServicesSection.tsx",
-          "operation": "create",
-          "description": "Create Services section component with 3–4 luxury service cards, each with unique pastel-tinted backgrounds (blush rose, lavender, sage, champagne) and refined hover effects"
-        },
-        {
-          "path": "frontend/src/components/ServiceCard.tsx",
-          "operation": "create",
-          "description": "Create reusable ServiceCard component with props for title, description, icon, and pastel background colour. Include smooth hover transitions for scale, shadow, or colour shift"
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render ServicesSection component after the About section"
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add a gallery section with grid/masonry layout displaying abstract pastel imagery",
-      "acceptanceCriteria": [
-        "Gallery section displays at least 4–6 visual placeholders or generated images in a grid or masonry layout",
-        "Each image/placeholder uses the pastel brand colour palette",
-        "Section has a clean section heading and consistent spacing"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/GallerySection.tsx",
-          "operation": "create",
-          "description": "Create Gallery section component with grid or masonry layout displaying the generated images: frontend/public/assets/generated/auraflora-gallery-1.dim_600x600.png, frontend/public/assets/generated/auraflora-gallery-2.dim_600x600.png, frontend/public/assets/generated/auraflora-gallery-3.dim_600x600.png, and frontend/public/assets/generated/auraflora-gallery-4.dim_600x600.png. Include clean section heading and consistent spacing."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render GallerySection component after the Services section"
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Build a contact section with an elegant form (name, email, message) styled to match the pastel theme",
-      "acceptanceCriteria": [
-        "Contact form includes name, email, and message fields",
-        "Form styling matches the overall pastel high-class aesthetic",
-        "Submit button uses a pastel accent colour with a refined hover effect",
-        "Section has appropriate heading and descriptive subtext"
+        "The ContactSection displays the user-specified contact details (address, email, phone, or other fields as provided).",
+        "All existing form fields (name, email, message) and submit button remain unchanged.",
+        "The AuraFlora pastel styling and layout of the contact section are preserved.",
+        "No other sections are affected by this change."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/ContactSection.tsx",
-          "operation": "create",
-          "description": "Create Contact section component with minimal, elegant form including name, email, and message fields. Style form inputs and submit button to match the AuraFlora pastel theme with refined hover effects. Include section heading and descriptive subtext. Form submission should show a success message without backend integration."
-        },
-        {
-          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render ContactSection component after the Gallery section"
-        }
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "summary": "Design a sticky navigation bar with AuraFlora logo, smooth-scroll links, and frosted-glass effect",
-      "acceptanceCriteria": [
-        "Navbar sticks to the top of the viewport on scroll",
-        "Includes AuraFlora wordmark or logo on the left",
-        "Navigation links scroll smoothly to corresponding sections",
-        "Navbar uses frosted-glass or soft semi-transparent pastel background"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Navbar.tsx",
-          "operation": "create",
-          "description": "Create sticky navigation bar component with AuraFlora logo from frontend/public/assets/generated/auraflora-logo.dim_400x120.png on the left and smooth-scroll links to all sections (Hero, About, Services, Gallery, Contact). Apply frosted-glass or soft semi-transparent pastel background effect."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render Navbar component at the top of the page layout, before all sections"
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add a footer with AuraFlora branding, social links, and copyright text in contrasting pastel tone",
-      "acceptanceCriteria": [
-        "Footer contains brand name, descriptor, and copyright notice",
-        "Includes placeholder social links styled consistently",
-        "Footer colour contrasts tastefully with the rest of the page while remaining within the pastel palette"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "create",
-          "description": "Create footer component with AuraFlora brand name, brief descriptor, placeholder social media links, and copyright text. Use a contrasting pastel tone (deeper or more saturated within the palette) to complete the page design."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render Footer component at the bottom of the page, after all sections"
-        }
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "summary": "Apply cohesive global design system with curated pastel palette, elegant typography, and abstract decorative elements",
-      "acceptanceCriteria": [
-        "All sections share a consistent pastel colour palette of at least 4 tones",
-        "Headings use an elegant serif or display typeface throughout",
-        "Decorative abstract elements (blobs, gradients, overlays) appear in at least 3 sections",
-        "Whitespace usage gives the site a premium, uncluttered feel",
-        "Design feels cohesive from top to bottom"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend Tailwind configuration with custom AuraFlora pastel colour palette (blush rose, lavender mist, sage green, champagne gold). Add elegant serif/display font family for headings and clean sans-serif for body text. Configure spacing scale for generous whitespace."
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Add global styles for the AuraFlora design system: import custom fonts (serif for headings, sans-serif for body), define CSS custom properties for the pastel palette, add base styles for smooth scrolling, and apply generous whitespace utilities. Include styles for abstract decorative elements (floating blobs, soft gradients, translucent overlays)."
+          "description": "Update the static contact information text (studio address, phone number, email) displayed in the ContactSection component to the new values that will be provided by the user. Keep all existing form logic, controlled inputs, submission handler, loading states, and styling intact. Only modify the hardcoded contact detail strings in the contact information display area."
         }
       ]
     }
