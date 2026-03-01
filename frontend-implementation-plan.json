@@ -1,83 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Condense feature bullets, tighten spacing, resize brand font, add WhatsApp numbers",
+  "title": "Replace navbar logo with user-provided image",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Condense AboutSection feature card titles and descriptions to 3-word phrases, enlarge titles, and add decorative symbols",
+      "summary": "Replace the current logo in Navbar and Footer with the user-provided logo image from generated assets",
       "acceptanceCriteria": [
-        "Each feature card description is 3 words or fewer (or a very short punchy phrase).",
-        "Card titles are visibly larger than before.",
-        "Each card has a decorative symbol or icon (e.g., ✦, 🌸, or SVG floral) alongside the title."
+        "The Navbar displays the user-provided logo image instead of the previous logo.",
+        "The Footer displays the same user-provided logo image for consistency.",
+        "The logo image is loaded from frontend/public/assets/generated.",
+        "The logo renders correctly at its intended display size without distortion or unwanted cropping."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Update the three feature highlight cards in the AboutSection component. Change card titles to '✦ Hand-Sculpted Florals', '✦ Artisanal Craftsmanship', and '✦ Bespoke Creations'. Replace descriptions with concise 3-word phrases: 'Shaped with care', 'Patience. Precision. Intention.', and 'Your vision, realized.' respectively. Increase the title font size by at least 2 Tailwind steps (e.g., from text-xl to text-3xl). The ✦ symbol is already included in the titles as specified."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Reduce vertical spacing between 'Born from Heartfelt Ideas' heading and adjacent paragraph",
-      "acceptanceCriteria": [
-        "The paragraph immediately following the 'Born from Heartfelt Ideas' heading sits visibly closer to the heading with minimal vertical gap.",
-        "No other section spacing is unintentionally affected."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "In the AboutSection component, reduce the vertical gap between the 'Born from Heartfelt Ideas' h2 heading and its adjacent paragraph. Locate the container wrapping these elements (currently using gap-6) and reduce the gap to gap-1 or mt-1 on the paragraph element to create tighter vertical alignment."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Decrease 'Luxury Botanical Atelier' brand subtitle font size by 2 Tailwind steps",
-      "acceptanceCriteria": [
-        "The 'Luxury Botanical Atelier' text is rendered 2 font-size steps smaller than its current size.",
-        "The change is applied wherever this text appears (HeroSection, Navbar, or Footer)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Decrease the font size of the 'Luxury Botanical Atelier' tagline text by 2 Tailwind font-size steps. If currently text-lg, change to text-sm; if text-xl, change to text-base. Apply this change to the tagline element within the HeroSection component."
-        },
         {
           "path": "frontend/src/components/Navbar.tsx",
           "operation": "modify",
-          "description": "If the 'Luxury Botanical Atelier' tagline appears in the Navbar component, decrease its font size by 2 Tailwind font-size steps to match the HeroSection update."
+          "description": "Update the logo source to use the user-provided image at frontend/public/assets/generated/logo-main.dim_320x80.png. Replace any existing logo element or text with an img element that references this generated asset. Ensure the logo maintains appropriate sizing and aspect ratio for the navbar layout."
         },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "If the 'Luxury Botanical Atelier' tagline appears in the Footer component, decrease its font size by 2 Tailwind font-size steps to match the HeroSection update."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add WhatsApp phone numbers to ContactSection and Footer with clickable wa.me links",
-      "acceptanceCriteria": [
-        "Both WhatsApp numbers are visible in the ContactSection with a clear WhatsApp label or icon.",
-        "Each number is a clickable link that opens WhatsApp (wa.me URL).",
-        "Both numbers also appear in the Footer contact details.",
-        "Numbers are displayed in a readable, formatted style consistent with the existing contact details."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Add both WhatsApp numbers (+91 9082777287 and +91 9920965759) to the contact details block in the ContactSection component. Display each as a clickable link using https://wa.me/919082777287 and https://wa.me/919920965759 respectively. Include a WhatsApp icon or label (e.g., 'WhatsApp:') before each number. Format the numbers in a readable style consistent with the existing email and location contact details."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Add both WhatsApp numbers (+91 9082777287 and +91 9920965759) to the Footer contact details block. Display each as a clickable link using https://wa.me/919082777287 and https://wa.me/919920965759 respectively. Include a WhatsApp label or icon before each number. Ensure the styling matches the existing contact details format in the Footer."
+          "description": "Update the brand logo to use the same user-provided image at frontend/public/assets/generated/logo-main.dim_320x80.png. Replace any existing logo element or text with an img element that references this generated asset. Ensure the logo maintains appropriate sizing and aspect ratio for the footer layout, matching the Navbar implementation for consistency."
         }
       ]
     }

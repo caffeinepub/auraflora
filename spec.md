@@ -1,12 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Tighten text and spacing in the AboutSection, resize the brand tagline font, and add WhatsApp contact numbers to the ContactSection and Footer.
+**Goal:** Replace the logo in the Navbar and Footer with the user-provided image.
 
 **Planned changes:**
-- In the AboutSection, update the three feature card titles to include a ✦ symbol and increase their font size by 2 steps; replace long descriptions with short punchy phrases ("Shaped with care", "Patience. Precision. Intention.", "Your vision, realized.")
-- Reduce the vertical gap between the "Born from Heartfelt Ideas" heading and its paragraph in the AboutSection
-- Decrease the "Luxury Botanical Atelier" tagline font size by 2 Tailwind steps wherever it appears (HeroSection, Navbar, Footer)
-- Add both WhatsApp numbers (+91 9082777287 and +91 9920965759) as clickable wa.me links with a WhatsApp icon/label in the ContactSection and Footer
+- Update the Navbar component to use the user-provided logo image (`WhatsApp Image 2026-03-01 at 4.57.35 PM.jpeg`) instead of the current logo.
+- Update the Footer component to display the same user-provided logo image for consistency.
 
-**User-visible outcome:** The About section cards are more concise and visually prominent, the heading and paragraph are tightly grouped, the brand tagline appears smaller, and visitors can click either WhatsApp number directly from the contact area or footer.
+**User-visible outcome:** The Navbar and Footer both display the user's provided logo image correctly sized and without distortion.

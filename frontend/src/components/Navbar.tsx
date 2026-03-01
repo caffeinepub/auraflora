@@ -47,7 +47,7 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
           >
             <img
-              src="/assets/generated/auraflora-logo.dim_400x120.png"
+              src="/assets/generated/logo-main.dim_320x80.png"
               alt="AuraFlora"
               className="h-10 w-auto object-contain"
             />

@@ -1,52 +1,22 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "A luxury botanical atelier website with hand-sculpted florals, artisanal craftsmanship, and bespoke creations. Features include condensed feature bullet points (3 words max with symbols), tightened title/paragraph spacing, reduced 'Luxury Botanical Atelier' font size, and WhatsApp contact numbers in the connect section.",
-  "architectural_notes": [
-    "Feature bullets condensed to 3-word summaries with optional logo symbols",
-    "Title and paragraph spacing tightened/aligned together",
-    "'Luxury Botanical Atelier' font size reduced by 2 units",
-    "WhatsApp numbers +91 9082777287 and +91 9920965759 added to connect section/page"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-the-aboutsection-condense-each-of-the-three-feature-highlight-card-titles-and-descriptions-as-follows-hand-sculpted-florals-every-bloom-is-individually-shaped-with-meticulous-attention-title-becomes-hand-sculpted-florals-and-description-becomes-a-short-3-word-phrase-such-as-shaped-with-care-artisanal-craftsmanship-created-with-patience-precision-and-creative-intention-title-becomes-artisanal-craftsmanship-and-description-becomes-patience-precision-intention-bespoke-creations-custom-hues-and-designs-tailored-to-your-vision-title-becomes-bespoke-creations-and-description-becomes-your-vision-realized-enlarge-the-card-titles-increase-font-size-by-at-least-2-steps-and-optionally-integrate-a-small-botanical-or-floral-symbol-icon-into-each-card",
-      "title": "In the AboutSection, condense each of the three feature highlight card titles and descriptions as follows: 'Hand-Sculpted Florals / Every bloom is individually shaped with meticulous attention' → title becomes '✦ Hand-Sculpted Florals' and description becomes a short 3-word phrase such as 'Shaped with care'; 'Artisanal Craftsmanship / Created with patience, precision, and creative intention' → title becomes '✦ Artisanal Craftsmanship' and description becomes 'Patience. Precision. Intention.'; 'Bespoke Creations / Custom hues and designs tailored to your vision' → title becomes '✦ Bespoke Creations' and description becomes 'Your vision, realized.' Enlarge the card titles (increase font size by at least 2 steps) and optionally integrate a small botanical or floral symbol/icon into each card.",
+      "id": "feature-replace-the-current-logo-displayed-in-the-navbar-component-with-the-user-provided-image-use-the-newly-generated-logo-asset-from-frontend-public-assets-generated-as-the-logo-source-in-the-navbar-also-update-the-logo-in-the-footer-to-match",
+      "title": "Replace the current logo displayed in the Navbar component with the user-provided image. Use the newly generated logo asset from frontend/public/assets/generated as the logo source in the Navbar. Also update the logo in the Footer to match.",
       "reqIds": [
         "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-in-the-aboutsection-reduce-the-vertical-spacing-between-the-born-from-heartfelt-ideas-title-and-its-adjacent-paragraph-so-they-appear-closer-and-visually-aligned-together-the-gap-between-heading-and-paragraph-should-be-noticeably-tighter-e-g-reduce-gap-or-margin-top-to-a-minimal-value-such-as-mt-1-or-gap-1",
-      "title": "In the AboutSection, reduce the vertical spacing between the 'Born from Heartfelt Ideas' title and its adjacent paragraph so they appear closer and visually aligned together. The gap between heading and paragraph should be noticeably tighter (e.g., reduce gap or margin-top to a minimal value such as mt-1 or gap-1).",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-decrease-the-font-size-of-the-luxury-botanical-atelier-brand-subtitle-tagline-text-visible-in-herosection-or-navbar-by-2-tailwind-font-size-steps-e-g-if-currently-text-lg-reduce-to-text-sm-if-text-xl-reduce-to-text-base",
-      "title": "Decrease the font size of the 'Luxury Botanical Atelier' brand subtitle/tagline text (visible in HeroSection or Navbar) by 2 Tailwind font-size steps (e.g., if currently text-lg, reduce to text-sm; if text-xl, reduce to text-base).",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-both-whatsapp-phone-numbers-91-9082777287-and-91-9920965759-to-the-contactsection-display-them-as-clickable-whatsapp-links-using-https-wa-me-919082777287-and-https-wa-me-919920965759-with-a-whatsapp-icon-or-label-also-add-these-numbers-to-the-footer-contact-details-block",
-      "title": "Add both WhatsApp phone numbers (+91 9082777287 and +91 9920965759) to the ContactSection. Display them as clickable WhatsApp links (using https://wa.me/919082777287 and https://wa.me/919920965759) with a WhatsApp icon or label. Also add these numbers to the Footer contact details block.",
-      "reqIds": [
-        "REQ-4"
       ],
       "version": 1
     }
   ],
   "new_feature_requests": [],
-  "gameProjectType": "none",
-  "projectName": "Luxury Botanical Atelier",
+  "projectName": "AuraFlora",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
