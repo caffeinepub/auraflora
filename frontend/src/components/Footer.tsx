@@ -1,4 +1,4 @@
-import { SiInstagram } from 'react-icons/si';
+import { SiInstagram, SiWhatsapp } from 'react-icons/si';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -83,7 +83,34 @@ export default function Footer() {
             >
               hello.auraflora@gmail.com
             </a>
-            <p className="text-sm text-aura-footer-fg/50 font-body mt-1">
+
+            {/* WhatsApp numbers */}
+            <div className="mt-3 flex flex-col gap-1.5">
+              <div className="flex items-center gap-2">
+                <SiWhatsapp size={13} className="text-green-500/60 shrink-0" />
+                <a
+                  href="https://wa.me/919082777287"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-aura-footer-fg/50 font-body hover:text-aura-rose transition-colors duration-300"
+                >
+                  +91 90827 77287
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <SiWhatsapp size={13} className="text-green-500/60 shrink-0" />
+                <a
+                  href="https://wa.me/919920965759"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-aura-footer-fg/50 font-body hover:text-aura-rose transition-colors duration-300"
+                >
+                  +91 99209 65759
+                </a>
+              </div>
+            </div>
+
+            <p className="text-sm text-aura-footer-fg/50 font-body mt-2">
               Mumbai
             </p>
             <p className="text-sm text-aura-footer-fg/50 font-body mt-1">

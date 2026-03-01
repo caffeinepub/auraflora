@@ -4,6 +4,11 @@ export default function HeroSection() {
     if (target) target.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleScrollToGallery = () => {
+    const target = document.querySelector('#gallery');
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section
       id="hero"
@@ -25,45 +30,40 @@ export default function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-aura-champagne/10 blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Eyebrow */}
-        <p className="text-xs tracking-[0.4em] uppercase font-medium text-aura-champagne mb-6 opacity-90">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
+        {/* Brand Name — top, huge */}
+        <h1 className="font-display text-8xl md:text-[10rem] lg:text-[13rem] font-light text-white leading-none tracking-tight mb-4">
+          Aura<span className="italic text-aura-champagne">Flora</span>
+        </h1>
+
+        {/* Luxury Botanical Atelier — decreased by 2 font-size steps (was xl/2xl/3xl → base/lg/xl) */}
+        <p className="text-base md:text-lg lg:text-xl tracking-[0.3em] uppercase font-semibold italic text-aura-champagne mb-10">
           Luxury Botanical Atelier
         </p>
 
-        {/* Headline */}
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-light text-white leading-none mb-6 tracking-tight">
-          Aura
-          <span className="italic text-aura-champagne">Flora</span>
-        </h1>
-
-        {/* Tagline */}
-        <p className="font-body text-lg md:text-xl text-white/70 font-light tracking-wide max-w-xl mx-auto mb-12 leading-relaxed">
+        {/* Tagline / Quote — grey, bold */}
+        <p className="font-body text-lg md:text-xl font-bold tracking-wide max-w-xl mx-auto mb-14 leading-loose text-gray-300">
           Where nature's essence meets artisanal refinement — curated botanical experiences for the discerning soul.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* CTA Buttons — bigger */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
           <button
-            onClick={() => {
-              const target = document.querySelector('#services');
-              if (target) target.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-10 py-4 rounded-full bg-aura-rose/80 hover:bg-aura-rose text-white text-sm tracking-widest uppercase font-medium transition-all duration-300 hover:shadow-glow hover:scale-105 backdrop-blur-sm"
+            onClick={handleScrollToGallery}
+            className="px-12 py-5 rounded-full bg-aura-rose/80 hover:bg-aura-rose text-white text-base tracking-widest uppercase font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105 backdrop-blur-sm"
           >
             Explore Our World
           </button>
           <button
             onClick={handleScrollToAbout}
-            className="px-10 py-4 rounded-full border border-white/30 hover:border-white/60 text-white text-sm tracking-widest uppercase font-medium transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
+            className="px-12 py-5 rounded-full border border-white/30 hover:border-white/60 text-white text-base tracking-widest uppercase font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm"
           >
             Our Story
           </button>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — line only, no text */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow">
-          <span className="text-white/40 text-xs tracking-widest uppercase">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
         </div>
       </div>

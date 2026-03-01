@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-01T08:08:26.972Z",
+  "generatedAt": "2026-03-01T12:08:12.391Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
+        "summary": "In the AboutSection, condense each of the three feature highlight card titles and descriptions as follows: 'Hand-Sculpted Florals / Every bloom is individually shaped with meticulous attention' → title becomes '✦ Hand-Sculpted Florals' and description becomes a short 3-word phrase such as 'Shaped with care'; 'Artisanal Craftsmanship / Created with patience, precision, and creative intention' → title becomes '✦ Artisanal Craftsmanship' and description becomes 'Patience. Precision. Intention.'; 'Bespoke Creations / Custom hues and designs tailored to your vision' → title becomes '✦ Bespoke Creations' and description becomes 'Your vision, realized.' Enlarge the card titles (increase font size by at least 2 steps) and optionally integrate a small botanical or floral symbol/icon into each card.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/AboutSection.tsx"
@@ -23,13 +23,40 @@
       },
       {
         "id": "REQ-2",
-        "summary": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
+        "summary": "In the AboutSection, reduce the vertical spacing between the 'Born from Heartfelt Ideas' title and its adjacent paragraph so they appear closer and visually aligned together. The gap between heading and paragraph should be noticeably tighter (e.g., reduce gap or margin-top to a minimal value such as mt-1 or gap-1).",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/AboutSection.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/AboutSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Decrease the font size of the 'Luxury Botanical Atelier' brand subtitle/tagline text (visible in HeroSection or Navbar) by 2 Tailwind font-size steps (e.g., if currently text-lg, reduce to text-sm; if text-xl, reduce to text-base).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/Footer.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add both WhatsApp phone numbers (+91 9082777287 and +91 9920965759) to the ContactSection. Display them as clickable WhatsApp links (using https://wa.me/919082777287 and https://wa.me/919920965759) with a WhatsApp icon or label. Also add these numbers to the Footer contact details block.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/ContactSection.tsx",
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ContactSection.tsx",
+          "frontend/src/components/Footer.tsx"
         ]
       }
     ]
@@ -40,6 +67,9 @@
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/components/AboutSection.tsx",
+    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

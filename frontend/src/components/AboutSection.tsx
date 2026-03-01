@@ -1,16 +1,19 @@
 export default function AboutSection() {
   const highlights = [
     {
+      symbol: '✦',
       title: 'Hand-Sculpted Florals',
-      description: 'Every bloom is individually shaped with meticulous attention.',
+      description: 'Shaped with care.',
     },
     {
+      symbol: '❋',
       title: 'Artisanal Craftsmanship',
-      description: 'Created with patience, precision, and creative intention.',
+      description: 'Patience. Precision. Intention.',
     },
     {
+      symbol: '✿',
       title: 'Bespoke Creations',
-      description: 'Custom hues and designs tailored to your vision.',
+      description: 'Your vision, realized.',
     },
   ];
 
@@ -34,10 +37,10 @@ export default function AboutSection() {
           Our Essence
         </p>
 
-        {/* Asymmetric layout */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-0 items-start">
-          {/* Left column — large heading */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32">
+        {/* Asymmetric layout — title and paragraphs top-aligned */}
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-0 items-start">
+          {/* Left column — large heading, top-aligned */}
+          <div className="lg:col-span-5">
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
               Born from
               <br />
@@ -54,23 +57,25 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right column — offset content */}
-          <div className="lg:col-span-6 lg:col-start-7 lg:pt-20">
-            <p className="font-body text-lg text-foreground/60 leading-relaxed mb-8">
+          {/* Right column — no top offset so it aligns with the title */}
+          <div className="lg:col-span-6 lg:col-start-7">
+            {/* Tighter spacing: mb-1 instead of mb-4 on first paragraph */}
+            <p className="font-body text-lg text-foreground/60 leading-relaxed mb-1">
               Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.
             </p>
-            <p className="font-body text-lg text-foreground/60 leading-relaxed mb-12">
+            <p className="font-body text-lg text-foreground/60 leading-relaxed mb-10">
               As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.
             </p>
 
-            {/* Feature highlights */}
-            <div className="grid grid-cols-3 gap-8">
+            {/* Feature highlights — enlarged titles with symbols */}
+            <div className="grid grid-cols-3 gap-6">
               {highlights.map((item) => (
                 <div key={item.title} className="text-center">
-                  <div className="font-display text-sm font-semibold text-aura-rose mb-2 leading-snug">
+                  <div className="text-2xl text-aura-rose mb-2 leading-none">{item.symbol}</div>
+                  <div className="font-display text-xl md:text-2xl font-semibold text-aura-rose mb-2 leading-snug">
                     {item.title}
                   </div>
-                  <div className="text-xs text-foreground/40 font-body leading-relaxed">
+                  <div className="text-xs text-foreground/40 font-body leading-relaxed italic">
                     {item.description}
                   </div>
                 </div>

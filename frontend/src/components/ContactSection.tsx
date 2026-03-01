@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SiInstagram } from 'react-icons/si';
+import { SiInstagram, SiWhatsapp } from 'react-icons/si';
 
 const RECIPIENT_EMAIL = 'hello.auraflora@gmail.com';
 
@@ -68,6 +68,31 @@ export default function ContactSection() {
                 >
                   {RECIPIENT_EMAIL}
                 </a>
+              </div>
+
+              {/* WhatsApp numbers */}
+              <div className="flex items-start gap-4">
+                <span className="text-xs tracking-widest uppercase text-foreground/30 font-medium w-16 pt-0.5 flex items-center gap-1">
+                  <SiWhatsapp size={12} className="text-green-500/70" />
+                </span>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="https://wa.me/919082777287"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-sm text-foreground/60 hover:text-aura-rose transition-colors duration-300 underline underline-offset-2"
+                  >
+                    +91 90827 77287
+                  </a>
+                  <a
+                    href="https://wa.me/919920965759"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body text-sm text-foreground/60 hover:text-aura-rose transition-colors duration-300 underline underline-offset-2"
+                  >
+                    +91 99209 65759
+                  </a>
+                </div>
               </div>
 
               {/* Studio */}

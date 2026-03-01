@@ -1,10 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Update the About Us section copy and feature highlights with new brand-aligned text.
+**Goal:** Tighten text and spacing in the AboutSection, resize the brand tagline font, and add WhatsApp contact numbers to the ContactSection and Footer.
 
 **Planned changes:**
-- Replace the brand story paragraphs in the AboutSection with two new paragraphs beginning with "Our journey began with a quiet passion…" and "As an emerging studio, we are devoted to craftsmanship…"
-- Replace the three stat/highlight items with: "Hand-Sculpted Florals" / "Artisanal Craftsmanship" / "Bespoke Creations", each with their specified descriptions
+- In the AboutSection, update the three feature card titles to include a ✦ symbol and increase their font size by 2 steps; replace long descriptions with short punchy phrases ("Shaped with care", "Patience. Precision. Intention.", "Your vision, realized.")
+- Reduce the vertical gap between the "Born from Heartfelt Ideas" heading and its paragraph in the AboutSection
+- Decrease the "Luxury Botanical Atelier" tagline font size by 2 Tailwind steps wherever it appears (HeroSection, Navbar, Footer)
+- Add both WhatsApp numbers (+91 9082777287 and +91 9920965759) as clickable wa.me links with a WhatsApp icon/label in the ContactSection and Footer
 
-**User-visible outcome:** The About section displays the updated brand story paragraphs and three new feature highlight cards with the correct titles and descriptions, while the rest of the site remains unchanged.
+**User-visible outcome:** The About section cards are more concise and visually prominent, the heading and paragraph are tightly grouped, the brand tagline appears smaller, and visitors can click either WhatsApp number directly from the contact area or footer.

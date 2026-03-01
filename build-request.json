@@ -1,59 +1,91 @@
 {
   "kind": "build_request",
-  "title": "Update About Us page copy and feature highlights",
+  "title": "Condense feature bullets, tighten spacing, resize brand font, add WhatsApp numbers",
   "projectName": "AuraFlora",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
+      "text": "In the AboutSection, condense each of the three feature highlight card titles and descriptions as follows: 'Hand-Sculpted Florals / Every bloom is individually shaped with meticulous attention' → title becomes '✦ Hand-Sculpted Florals' and description becomes a short 3-word phrase such as 'Shaped with care'; 'Artisanal Craftsmanship / Created with patience, precision, and creative intention' → title becomes '✦ Artisanal Craftsmanship' and description becomes 'Patience. Precision. Intention.'; 'Bespoke Creations / Custom hues and designs tailored to your vision' → title becomes '✦ Bespoke Creations' and description becomes 'Your vision, realized.' Enlarge the card titles (increase font size by at least 2 steps) and optionally integrate a small botanical or floral symbol/icon into each card.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-4"
         ],
         "quotes": [
-          "Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art.",
-          "As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation."
+          "keeping these pointers shoerten what the mean withen 3 words and enleage them and if u want add symbols of logo also"
         ]
       },
       "acceptanceCriteria": [
-        "The About section displays both new paragraphs verbatim",
-        "The tone is simple and warm, not overly formal or high-class",
-        "Old placeholder paragraphs are removed"
+        "Each feature card description is 3 words or fewer (or a very short punchy phrase).",
+        "Card titles are visibly larger than before.",
+        "Each card has a decorative symbol or icon (e.g., ✦, 🌸, or SVG floral) alongside the title."
       ]
     },
     {
       "id": "REQ-2",
-      "text": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
+      "text": "In the AboutSection, reduce the vertical spacing between the 'Born from Heartfelt Ideas' title and its adjacent paragraph so they appear closer and visually aligned together. The gap between heading and paragraph should be noticeably tighter (e.g., reduce gap or margin-top to a minimal value such as mt-1 or gap-1).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-4"
         ],
         "quotes": [
-          "Hand-Sculpted Florals\nEvery bloom is individually shaped with meticulous attention.",
-          "Artisanal Craftsmanship\nCreated with patience, precision, and creative intention.",
-          "Bespoke Creations\nCustom hues and designs tailored to your vision."
+          "i want the paragraph the the title born from... closer and aligned together"
         ]
       },
       "acceptanceCriteria": [
-        "The three stat/highlight items in the About section show the new titles and descriptions exactly as specified",
-        "No references to '100% Natural Ingredients' or '50+ Curated Collections' remain",
-        "Layout and styling of the highlight cards remain consistent with the existing design"
+        "The paragraph immediately following the 'Born from Heartfelt Ideas' heading sits visibly closer to the heading with minimal vertical gap.",
+        "No other section spacing is unintentionally affected."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Decrease the font size of the 'Luxury Botanical Atelier' brand subtitle/tagline text (visible in HeroSection or Navbar) by 2 Tailwind font-size steps (e.g., if currently text-lg, reduce to text-sm; if text-xl, reduce to text-base).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "decrease the font size of luxury botanical atelier by 2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The 'Luxury Botanical Atelier' text is rendered 2 font-size steps smaller than its current size.",
+        "The change is applied wherever this text appears (HeroSection, Navbar, or Footer)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add both WhatsApp phone numbers (+91 9082777287 and +91 9920965759) to the ContactSection. Display them as clickable WhatsApp links (using https://wa.me/919082777287 and https://wa.me/919920965759) with a WhatsApp icon or label. Also add these numbers to the Footer contact details block.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add our phone numbers in the connect part and page... our WhatsApp phone numbers our, +91 9082777287 and +91 9920965759"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Both WhatsApp numbers are visible in the ContactSection with a clear WhatsApp label or icon.",
+        "Each number is a clickable link that opens WhatsApp (wa.me URL).",
+        "Both numbers also appear in the Footer contact details.",
+        "Numbers are displayed in a readable, formatted style consistent with the existing contact details."
       ]
     }
   ],
   "constraints": [
-    "Do not alter any other sections of the site",
-    "Do not change the overall layout or visual style of the About section",
-    "Keep the tone simple and approachable — not overly luxurious or formal"
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/.",
+    "Preserve all existing brand styling, color palette, and typography conventions defined in index.css and tailwind.config.js.",
+    "Do not alter the backend."
   ],
   "nonGoals": [
-    "Redesigning the About section layout",
-    "Adding new images to the About section",
-    "Changing any other page content or functionality",
-    "Modifying the checkout or contact flow"
+    "Redesigning the overall page layout or navigation.",
+    "Adding new sections or pages.",
+    "Integrating a real-time WhatsApp chat widget.",
+    "Changing the product listings or cart functionality."
   ],
   "imageRequirements": {
     "required": [],

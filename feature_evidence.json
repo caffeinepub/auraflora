@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-brand-story-paragraphs-in-the-aboutsection-component-with-the-following-two-paragraphs-simple-warm-tone-not-overly-formal-our-journey-began-with-a-quiet-passion-to-transform-soft-textured-fibers-into-enduring-floral-art-each-bloom-is-thoughtfully-sculpted-by-hand-shaped-petal-by-petal-into-creations-that-radiate-warmth-charm-and-individuality-and-as-an-emerging-studio-we-are-devoted-to-craftsmanship-detail-and-the-beauty-of-slow-creation-every-piece-is-formed-with-intention-a-gentle-balance-of-texture-color-and-imagination-designed-to-bring-lasting-joy-to-any-space",
-      "featureTitle": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
+      "featureId": "feature-in-the-aboutsection-condense-each-of-the-three-feature-highlight-card-titles-and-descriptions-as-follows-hand-sculpted-florals-every-bloom-is-individually-shaped-with-meticulous-attention-title-becomes-hand-sculpted-florals-and-description-becomes-a-short-3-word-phrase-such-as-shaped-with-care-artisanal-craftsmanship-created-with-patience-precision-and-creative-intention-title-becomes-artisanal-craftsmanship-and-description-becomes-patience-precision-intention-bespoke-creations-custom-hues-and-designs-tailored-to-your-vision-title-becomes-bespoke-creations-and-description-becomes-your-vision-realized-enlarge-the-card-titles-increase-font-size-by-at-least-2-steps-and-optionally-integrate-a-small-botanical-or-floral-symbol-icon-into-each-card",
+      "featureTitle": "In the AboutSection, condense each of the three feature highlight card titles and descriptions as follows: 'Hand-Sculpted Florals / Every bloom is individually shaped with meticulous attention' → title becomes '✦ Hand-Sculpted Florals' and description becomes a short 3-word phrase such as 'Shaped with care'; 'Artisanal Craftsmanship / Created with patience, precision, and creative intention' → title becomes '✦ Artisanal Craftsmanship' and description becomes 'Patience. Precision. Intention.'; 'Bespoke Creations / Custom hues and designs tailored to your vision' → title becomes '✦ Bespoke Creations' and description becomes 'Your vision, realized.' Enlarge the card titles (increase font size by at least 2 steps) and optionally integrate a small botanical or floral symbol/icon into each card.",
       "files": [
         "frontend/src/components/AboutSection.tsx"
       ],
@@ -20,8 +20,8 @@
       "confidence": "high"
     },
     {
-      "featureId": "feature-replace-the-three-stat-highlights-in-the-aboutsection-currently-100-natural-ingredients-and-50-curated-collections-and-handcrafted-with-care-with-the-following-three-feature-highlights-1-title-hand-sculpted-florals-description-every-bloom-is-individually-shaped-with-meticulous-attention-2-title-artisanal-craftsmanship-description-created-with-patience-precision-and-creative-intention-3-title-bespoke-creations-description-custom-hues-and-designs-tailored-to-your-vision",
-      "featureTitle": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
+      "featureId": "feature-in-the-aboutsection-reduce-the-vertical-spacing-between-the-born-from-heartfelt-ideas-title-and-its-adjacent-paragraph-so-they-appear-closer-and-visually-aligned-together-the-gap-between-heading-and-paragraph-should-be-noticeably-tighter-e-g-reduce-gap-or-margin-top-to-a-minimal-value-such-as-mt-1-or-gap-1",
+      "featureTitle": "In the AboutSection, reduce the vertical spacing between the 'Born from Heartfelt Ideas' title and its adjacent paragraph so they appear closer and visually aligned together. The gap between heading and paragraph should be noticeably tighter (e.g., reduce gap or margin-top to a minimal value such as mt-1 or gap-1).",
       "files": [
         "frontend/src/components/AboutSection.tsx"
       ],
@@ -34,6 +34,44 @@
       ],
       "testIds": [
         "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-decrease-the-font-size-of-the-luxury-botanical-atelier-brand-subtitle-tagline-text-visible-in-herosection-or-navbar-by-2-tailwind-font-size-steps-e-g-if-currently-text-lg-reduce-to-text-sm-if-text-xl-reduce-to-text-base",
+      "featureTitle": "Decrease the font size of the 'Luxury Botanical Atelier' brand subtitle/tagline text (visible in HeroSection or Navbar) by 2 Tailwind font-size steps (e.g., if currently text-lg, reduce to text-sm; if text-xl, reduce to text-base).",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-both-whatsapp-phone-numbers-91-9082777287-and-91-9920965759-to-the-contactsection-display-them-as-clickable-whatsapp-links-using-https-wa-me-919082777287-and-https-wa-me-919920965759-with-a-whatsapp-icon-or-label-also-add-these-numbers-to-the-footer-contact-details-block",
+      "featureTitle": "Add both WhatsApp phone numbers (+91 9082777287 and +91 9920965759) to the ContactSection. Display them as clickable WhatsApp links (using https://wa.me/919082777287 and https://wa.me/919920965759) with a WhatsApp icon or label. Also add these numbers to the Footer contact details block.",
+      "files": [
+        "frontend/src/components/ContactSection.tsx",
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
       ],
       "confidence": "high"
     }
