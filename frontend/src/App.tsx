@@ -1,3 +1,4 @@
+import { CartProvider } from './contexts/CartContext';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -9,17 +10,19 @@ import CartDrawer from './components/CartDrawer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Navbar />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProductsSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <CartDrawer />
-    </div>
+    <CartProvider>
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <Navbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ProductsSection />
+          <GallerySection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <CartDrawer />
+      </div>
+    </CartProvider>
   );
 }

@@ -24,6 +24,8 @@ const initialForm: FormData = {
   country: 'India',
 };
 
+const ORDER_EMAIL = 'hello.auraflora@gmail.com';
+
 export default function CheckoutForm({ onBack }: CheckoutFormProps) {
   const { items, subtotal, clearCart, closeCart } = useCart();
   const [form, setForm] = useState<FormData>(initialForm);
@@ -88,7 +90,7 @@ export default function CheckoutForm({ onBack }: CheckoutFormProps) {
 
     const subject = encodeURIComponent('AuraFlora Order');
     const encodedBody = encodeURIComponent(body);
-    window.location.href = `mailto:aurafloraaf@gmail.com?subject=${subject}&body=${encodedBody}`;
+    window.location.href = `mailto:${ORDER_EMAIL}?subject=${subject}&body=${encodedBody}`;
 
     setSubmitted(true);
     clearCart();

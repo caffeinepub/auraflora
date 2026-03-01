@@ -1,130 +1,37 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace Services section with a shoppable Products section",
+  "title": "Update About Us page copy and feature highlights",
   "requirements": [
     {
-      "id": "REQ-13",
-      "summary": "Replace the existing ServicesSection with a new ProductsSection component displaying a curated grid of luxury product cards with images, names, descriptions, prices, and Add to Cart buttons styled in the AuraFlora pastel palette",
+      "id": "REQ-1",
+      "summary": "Replace brand story paragraphs in AboutSection with new warm, approachable copy about the studio's journey and devotion to craftsmanship",
       "acceptanceCriteria": [
-        "The ServicesSection and ServiceCard components are replaced or repurposed as a ProductsSection with product cards.",
-        "Each product card displays a product image placeholder, name, short description, and price.",
-        "Each card has an 'Add to Cart' or 'Buy Now' button styled to match the AuraFlora pastel theme.",
-        "Cards use pastel-tinted backgrounds and hover animations consistent with the existing design system.",
-        "The section heading is updated to reflect 'Products', 'Shop', or similar label."
+        "The About section displays both new paragraphs verbatim",
+        "The tone is simple and warm, not overly formal or high-class",
+        "Old placeholder paragraphs are removed"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ProductCard.tsx",
-          "operation": "create",
-          "description": "Create a ProductCard component that displays a product image (using generated placeholders frontend/public/assets/generated/product-placeholder-1.dim_600x600.png through product-placeholder-4.dim_600x600.png), product name, short description, price, and an 'Add to Cart' button. Style with frosted-glass effects, pastel-tinted backgrounds, serif headings (Cormorant Garamond), and hover animations matching the existing ServiceCard design patterns. Include props for product data and an onAddToCart callback."
-        },
-        {
-          "path": "frontend/src/components/ProductsSection.tsx",
-          "operation": "create",
-          "description": "Create a ProductsSection component that renders a responsive grid of ProductCard components (minimum 4-6 products). Define a curated product catalog with sample botanical/floral luxury products including names, descriptions, and prices. Use the section header pattern from ServicesSection with a gradient background. Integrate the cart context to handle add-to-cart actions. Assign each product one of the four generated product placeholder images from frontend/public/assets/generated/."
-        },
-        {
-          "path": "frontend/src/App.tsx",
+          "path": "frontend/src/components/AboutSection.tsx",
           "operation": "modify",
-          "description": "Replace the ServicesSection import and component usage with ProductsSection. Maintain the same position in the layout order between AboutSection and GallerySection to preserve the flow of the single-page design."
+          "description": "Replace the existing brand story paragraph content with the two new paragraphs: 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.' Maintain the existing layout structure and styling."
         }
       ]
     },
     {
-      "id": "REQ-14",
-      "summary": "Implement a client-side shopping cart with add/remove functionality, quantity management, and a slide-out drawer UI styled in the AuraFlora pastel design system",
+      "id": "REQ-2",
+      "summary": "Replace the three stat highlights with new feature highlights: Hand-Sculpted Florals, Artisanal Craftsmanship, and Bespoke Creations",
       "acceptanceCriteria": [
-        "Clicking 'Add to Cart' adds the product to a cart state managed in React.",
-        "A cart icon/button in the Navbar or page shows the current item count.",
-        "Opening the cart displays all added items with name, quantity, unit price, and a line total.",
-        "Users can increment, decrement, or remove items from the cart.",
-        "A subtotal is displayed at the bottom of the cart.",
-        "The cart UI is styled consistently with the AuraFlora pastel design system."
+        "The three stat/highlight items in the About section show the new titles and descriptions exactly as specified",
+        "No references to '100% Natural Ingredients' or '50+ Curated Collections' remain",
+        "Layout and styling of the highlight cards remain consistent with the existing design"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/contexts/CartContext.tsx",
-          "operation": "create",
-          "description": "Create a CartContext using React Context API to manage cart state globally. Implement cart operations: addToCart, removeFromCart, updateQuantity, clearCart, and calculate total. Define the Product and CartItem types. Persist cart state to localStorage for session continuity."
-        },
-        {
-          "path": "frontend/src/components/CartDrawer.tsx",
-          "operation": "create",
-          "description": "Create a CartDrawer component that renders a slide-out drawer overlay with a frosted-glass panel. Display cart items with product name, quantity controls (increment/decrement buttons), unit price, line total, and remove button. Show a subtotal at the bottom and a 'Checkout' button. Style with OKLCH pastel tokens, Cormorant Garamond headings, and smooth animations. Include a close button and backdrop click-to-close behavior."
-        },
-        {
-          "path": "frontend/src/components/Navbar.tsx",
+          "path": "frontend/src/components/AboutSection.tsx",
           "operation": "modify",
-          "description": "Add a cart icon button to the Navbar (both desktop and mobile views) that displays the current cart item count as a badge. Wire the button to open the CartDrawer. Style the cart icon and badge to match the existing Navbar aesthetic with pastel accents on hover."
-        },
-        {
-          "path": "frontend/src/main.tsx",
-          "operation": "modify",
-          "description": "Wrap the App component with CartProvider to make cart state available throughout the application. Place it inside the existing QueryClientProvider and InternetIdentityProvider hierarchy."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import and render the CartDrawer component at the root level of the App component so it can be opened from anywhere via the cart context. Position it to overlay the entire layout when active."
-        }
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "summary": "Add a checkout flow with a form collecting customer name, email, and delivery address, then opening a pre-filled mailto: URI to aurafloraaf@gmail.com with order details",
-      "acceptanceCriteria": [
-        "A 'Checkout' or 'Place Order' button is present in the cart view.",
-        "Clicking it opens a minimal checkout form requesting name, email, and delivery address.",
-        "On form submission, a mailto: URI addressed to aurafloraaf@gmail.com is opened with order details pre-filled in the subject and body.",
-        "The checkout form is styled to match the AuraFlora pastel aesthetic.",
-        "A confirmation message is shown to the user after submission."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/CheckoutForm.tsx",
-          "operation": "create",
-          "description": "Create a CheckoutForm component with input fields for customer name, email, and delivery address (street, city, postal code, country). Style inputs with the frosted-glass effect and pastel focus rings matching ContactSection. On form submission, construct a mailto: URI addressed to aurafloraaf@gmail.com with the subject 'AuraFlora Order' and body containing itemized order details (product names, quantities, prices, subtotal) plus customer information. Open the mailto link and display a confirmation message. Include form validation for required fields and email format."
-        },
-        {
-          "path": "frontend/src/components/CartDrawer.tsx",
-          "operation": "modify",
-          "description": "Replace the 'Checkout' button action to toggle display of the CheckoutForm component within the drawer (or transition to checkout view). Ensure the checkout form is presented with smooth animation and maintains the drawer's frosted-glass styling. After successful checkout submission, provide visual feedback and option to return to shopping."
-        }
-      ]
-    },
-    {
-      "id": "REQ-16",
-      "summary": "Update the Navbar smooth-scroll link that previously pointed to the Services section to now point to the new Products section anchor",
-      "acceptanceCriteria": [
-        "The navbar link label is updated from 'Services' (or equivalent) to 'Products' or 'Shop'.",
-        "Clicking the navbar link smoothly scrolls to the ProductsSection."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Navbar.tsx",
-          "operation": "modify",
-          "description": "Update the navigation link label from 'Services' to 'Products' or 'Shop'. Update the href attribute from '#services' to '#products' to match the new ProductsSection anchor ID. Verify smooth-scroll behavior is preserved for both desktop and mobile navigation."
-        },
-        {
-          "path": "frontend/src/components/ProductsSection.tsx",
-          "operation": "modify",
-          "description": "Ensure the ProductsSection root element has id='products' to serve as the scroll anchor target for navigation links."
-        }
-      ]
-    },
-    {
-      "id": "REQ-17",
-      "summary": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor",
-      "acceptanceCriteria": [
-        "Footer link previously labeled 'Services' is updated to 'Products' or 'Shop'.",
-        "The footer link scrolls to the ProductsSection anchor correctly."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the footer navigation link label from 'Services' to 'Products' or 'Shop'. Update the href attribute from '#services' to '#products' to match the ProductsSection anchor. Ensure the smooth-scroll behavior is preserved."
+          "description": "Replace the three existing stat highlights ('100% Natural Ingredients', '50+ Curated Collections', 'Handcrafted with Care') with the new feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.' Keep the existing card layout, grid structure, and visual styling unchanged."
         }
       ]
     }

@@ -1,147 +1,28 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
-  "summary": "Website for a business called AuraFlora, themed with unique pastel colours to feel high-classed and abstract.",
+  "projectStateVersion": 3,
+  "summary": "AuraFlora - a handcrafted floral art studio website with checkout functionality using mailto: approach to send orders to hello.auraflora@gmail.com",
   "architectural_notes": [
-    "Use a blend of unique pastel colours throughout the design to convey a high-class, abstract feel"
+    "Checkout uses mailto: approach — orders are pre-filled emails sent to hello.auraflora@gmail.com, not automated"
   ],
-  "known_issues": [],
+  "known_issues": [
+    "Orders only arrive in inbox if customer's mail app opens and they manually click Send — no automatic delivery"
+  ],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Elegant abstract pastel product placeholder — soft blush rose and champagne gold tones, botanical or floral abstract texture, square format (product-placeholder-1.dim_600x600.png)\n- Elegant abstract pastel product placeholder — lavender mist and sage green tones, botanical or floral abstract texture, square format (product-placeholder-2.dim_600x600.png)\n- Elegant abstract pastel product placeholder — champagne gold and blush rose tones, delicate petal motif, square format (product-placeholder-3.dim_600x600.png)\n- Elegant abstract pastel product placeholder — sage green and lavender mist tones, soft watercolour floral texture, square format (product-placeholder-4.dim_600x600.png)",
   "existing_features": [
     {
-      "id": "feature-create-a-visually-striking-hero-section-with-the-auraflora-brand-name-a-refined-tagline-and-a-full-viewport-abstract-background-that-blends-soft-pastel-tones-such-as-blush-rose-lavender-mist-sage-green-and-champagne-gold-the-layout-should-feel-elevated-and-editorial",
-      "title": "Create a visually striking hero section with the AuraFlora brand name, a refined tagline, and a full-viewport abstract background that blends soft pastel tones (such as blush rose, lavender mist, sage green, and champagne gold). The layout should feel elevated and editorial.",
+      "id": "feature-replace-the-brand-story-paragraphs-in-the-aboutsection-component-with-the-following-two-paragraphs-simple-warm-tone-not-overly-formal-our-journey-began-with-a-quiet-passion-to-transform-soft-textured-fibers-into-enduring-floral-art-each-bloom-is-thoughtfully-sculpted-by-hand-shaped-petal-by-petal-into-creations-that-radiate-warmth-charm-and-individuality-and-as-an-emerging-studio-we-are-devoted-to-craftsmanship-detail-and-the-beauty-of-slow-creation-every-piece-is-formed-with-intention-a-gentle-balance-of-texture-color-and-imagination-designed-to-bring-lasting-joy-to-any-space",
+      "title": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-build-an-about-section-describing-auraflora-as-a-premium-brand-the-section-should-use-asymmetric-layout-with-pastel-accent-shapes-or-watercolour-style-decorative-elements-conveying-exclusivity-and-artistry",
-      "title": "Build an 'About' section describing AuraFlora as a premium brand. The section should use asymmetric layout with pastel accent shapes or watercolour-style decorative elements, conveying exclusivity and artistry.",
+      "id": "feature-replace-the-three-stat-highlights-in-the-aboutsection-currently-100-natural-ingredients-and-50-curated-collections-and-handcrafted-with-care-with-the-following-three-feature-highlights-1-title-hand-sculpted-florals-description-every-bloom-is-individually-shaped-with-meticulous-attention-2-title-artisanal-craftsmanship-description-created-with-patience-precision-and-creative-intention-3-title-bespoke-creations-description-custom-hues-and-designs-tailored-to-your-vision",
+      "title": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
       "reqIds": [
         "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-services-or-offerings-section-showcasing-3-4-sample-luxury-service-cards-for-auraflora-each-card-should-have-a-pastel-tinted-background-unique-to-it-elegant-hover-effects-and-use-refined-iconography-or-abstract-illustrations",
-      "title": "Create a 'Services' or 'Offerings' section showcasing 3–4 sample luxury service cards for AuraFlora. Each card should have a pastel-tinted background unique to it, elegant hover effects, and use refined iconography or abstract illustrations.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-gallery-or-featured-showcase-section-with-a-grid-or-masonry-layout-displaying-abstract-pastel-imagery-placeholders-this-section-should-reinforce-the-high-end-artistic-brand-identity-of-auraflora",
-      "title": "Add a gallery or featured showcase section with a grid or masonry layout displaying abstract pastel imagery placeholders. This section should reinforce the high-end, artistic brand identity of AuraFlora.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-build-a-contact-or-get-in-touch-section-with-a-minimal-elegant-form-name-email-message-fields-and-a-submit-button-styled-to-match-the-auraflora-pastel-theme",
-      "title": "Build a contact or 'Get in Touch' section with a minimal, elegant form (name, email, message fields) and a submit button styled to match the AuraFlora pastel theme.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-design-a-sticky-navigation-bar-with-the-auraflora-logo-wordmark-and-smooth-scroll-links-to-all-sections-the-navbar-should-be-translucent-with-a-frosted-glass-or-soft-pastel-blur-effect-to-maintain-the-abstract-premium-aesthetic",
-      "title": "Design a sticky navigation bar with the AuraFlora logo/wordmark and smooth-scroll links to all sections. The navbar should be translucent with a frosted-glass or soft pastel blur effect to maintain the abstract, premium aesthetic.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-footer-with-the-auraflora-name-brief-brand-descriptor-social-media-placeholder-links-and-copyright-text-style-it-with-a-deep-or-contrasting-pastel-tone-to-complete-the-page",
-      "title": "Add a footer with the AuraFlora name, brief brand descriptor, social media placeholder links, and copyright text. Style it with a deep or contrasting pastel tone to complete the page.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-apply-a-cohesive-global-design-system-across-the-entire-auraflora-website-a-curated-pastel-palette-blush-rose-lavender-sage-champagne-gold-serif-or-high-fashion-display-fonts-for-headings-clean-sans-serif-for-body-generous-whitespace-and-subtle-abstract-decorative-elements-floating-blobs-soft-gradients-translucent-overlays-to-achieve-a-high-class-abstract-visual-identity",
-      "title": "Apply a cohesive global design system across the entire AuraFlora website: a curated pastel palette (blush rose, lavender, sage, champagne/gold), serif or high-fashion display fonts for headings, clean sans-serif for body, generous whitespace, and subtle abstract decorative elements (floating blobs, soft gradients, translucent overlays) to achieve a high-class, abstract visual identity.",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-in-the-contactsection-make-the-email-address-aurafloraaf-gmail-com-an-interactable-mailto-link-mailto-aurafloraaf-gmail-com-replace-the-studio-location-text-with-mumbai-replace-any-hours-or-availability-text-with-a-response-time-notice-such-as-we-revert-within-24-48-hours",
-      "title": "In the ContactSection, make the email address 'aurafloraaf@gmail.com' an interactable mailto link (mailto:aurafloraaf@gmail.com). Replace the studio/location text with 'Mumbai'. Replace any 'hours' or availability text with a response time notice such as 'We revert within 24–48 hours'.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-in-the-contactsection-add-an-interactable-instagram-link-displaying-aura-flora-that-opens-https-www-instagram-com-aura-flora-in-a-new-tab",
-      "title": "In the ContactSection, add an interactable Instagram link displaying '@aura._.flora_' that opens 'https://www.instagram.com/aura._.flora_/' in a new tab.",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-in-the-footer-component-remove-the-facebook-and-pinterest-social-icons-links-entirely-keep-only-the-instagram-icon-link-and-update-it-to-point-to-https-www-instagram-com-aura-flora-opening-in-a-new-tab-update-all-contact-details-in-the-footer-to-match-email-aurafloraaf-gmail-com-as-a-mailto-link-location-mumbai-and-replace-any-hours-text-with-24-48-hour-response-time",
-      "title": "In the Footer component, remove the Facebook and Pinterest social icons/links entirely. Keep only the Instagram icon/link and update it to point to 'https://www.instagram.com/aura._.flora_/' opening in a new tab. Update all contact details in the footer to match: email 'aurafloraaf@gmail.com' (as a mailto link), location 'Mumbai', and replace any hours text with '24–48 hour response time'.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-wire-the-enquiry-contact-form-so-that-on-submission-it-composes-and-opens-a-mailto-link-to-aurafloraaf-gmail-com-pre-filled-with-the-submitted-name-email-and-message-as-the-email-body-and-subject-this-should-use-a-mailto-uri-approach-since-no-backend-email-service-is-available",
-      "title": "Wire the enquiry/contact form so that on submission it composes and opens a mailto link to 'aurafloraaf@gmail.com' pre-filled with the submitted name, email, and message as the email body and subject. This should use a mailto: URI approach since no backend email service is available.",
-      "reqIds": [
-        "REQ-12"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-replace-the-existing-servicessection-with-a-new-productssection-component-display-a-curated-grid-of-auraflora-products-at-minimum-4-6-items-each-shown-as-a-luxury-product-card-consistent-with-the-existing-pastel-design-system-each-card-should-include-a-product-image-placeholder-product-name-a-short-description-a-price-and-an-add-to-cart-or-buy-now-call-to-action-button-styled-in-the-auraflora-pastel-palette-with-elegant-hover-effects",
-      "title": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
-      "reqIds": [
-        "REQ-13"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-a-client-side-shopping-cart-users-should-be-able-to-add-products-to-a-cart-view-the-cart-e-g-via-a-slide-out-drawer-or-modal-see-item-quantities-and-a-total-price-and-remove-items-the-cart-ui-must-follow-the-auraflora-pastel-design-system-frosted-glass-soft-pastel-tones-serif-headings",
-      "title": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
-      "reqIds": [
-        "REQ-14"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-a-checkout-flow-that-allows-users-to-place-an-order-by-submitting-their-name-email-and-delivery-address-on-submission-open-a-pre-filled-mailto-uri-to-aurafloraaf-gmail-com-with-the-order-details-items-quantities-prices-customer-info-as-the-email-body-since-no-backend-payment-or-order-service-is-available",
-      "title": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
-      "reqIds": [
-        "REQ-15"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-navbar-smooth-scroll-link-that-previously-pointed-to-the-services-section-so-it-now-points-to-the-new-products-section-anchor",
-      "title": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
-      "reqIds": [
-        "REQ-16"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-footer-navigation-links-so-that-any-reference-to-the-services-section-is-renamed-to-match-the-new-products-shop-section-and-scrolls-to-the-correct-anchor",
-      "title": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
-      "reqIds": [
-        "REQ-17"
       ],
       "version": 1
     }
@@ -149,19 +30,7 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "AuraFlora business website with pastel colour theme, high-class and abstract aesthetic",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Update contact section: email to aurafloraaf@gmail.com (interactable), studio location to Mumbai, change hours to show 24-48 hour revert time, add interactable Instagram link (aura._.flora_), footer: remove Facebook and Pinterest icons, update footer details, and wire enquiry form to send emails to aurafloraaf@gmail.com",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Replace the Services/Offerings section with a Products section where users can browse and buy products",
+      "summary": "Update About Us page paragraphs and feature highlights with new copy",
       "reqIds": [],
       "status": "pending"
     }

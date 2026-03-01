@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-existing-servicessection-with-a-new-productssection-component-display-a-curated-grid-of-auraflora-products-at-minimum-4-6-items-each-shown-as-a-luxury-product-card-consistent-with-the-existing-pastel-design-system-each-card-should-include-a-product-image-placeholder-product-name-a-short-description-a-price-and-an-add-to-cart-or-buy-now-call-to-action-button-styled-in-the-auraflora-pastel-palette-with-elegant-hover-effects",
-      "featureTitle": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
+      "featureId": "feature-replace-the-brand-story-paragraphs-in-the-aboutsection-component-with-the-following-two-paragraphs-simple-warm-tone-not-overly-formal-our-journey-began-with-a-quiet-passion-to-transform-soft-textured-fibers-into-enduring-floral-art-each-bloom-is-thoughtfully-sculpted-by-hand-shaped-petal-by-petal-into-creations-that-radiate-warmth-charm-and-individuality-and-as-an-emerging-studio-we-are-devoted-to-craftsmanship-detail-and-the-beauty-of-slow-creation-every-piece-is-formed-with-intention-a-gentle-balance-of-texture-color-and-imagination-designed-to-bring-lasting-joy-to-any-space",
+      "featureTitle": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ProductCard.tsx",
-        "frontend/src/components/ProductsSection.tsx"
+        "frontend/src/components/AboutSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,18 +15,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-13"
+        "REQ-1"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-a-client-side-shopping-cart-users-should-be-able-to-add-products-to-a-cart-view-the-cart-e-g-via-a-slide-out-drawer-or-modal-see-item-quantities-and-a-total-price-and-remove-items-the-cart-ui-must-follow-the-auraflora-pastel-design-system-frosted-glass-soft-pastel-tones-serif-headings",
-      "featureTitle": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
+      "featureId": "feature-replace-the-three-stat-highlights-in-the-aboutsection-currently-100-natural-ingredients-and-50-curated-collections-and-handcrafted-with-care-with-the-following-three-feature-highlights-1-title-hand-sculpted-florals-description-every-bloom-is-individually-shaped-with-meticulous-attention-2-title-artisanal-craftsmanship-description-created-with-patience-precision-and-creative-intention-3-title-bespoke-creations-description-custom-hues-and-designs-tailored-to-your-vision",
+      "featureTitle": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/CartDrawer.tsx",
-        "frontend/src/components/Navbar.tsx",
-        "frontend/src/contexts/CartContext.tsx"
+        "frontend/src/components/AboutSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -38,63 +33,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-14"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-checkout-flow-that-allows-users-to-place-an-order-by-submitting-their-name-email-and-delivery-address-on-submission-open-a-pre-filled-mailto-uri-to-aurafloraaf-gmail-com-with-the-order-details-items-quantities-prices-customer-info-as-the-email-body-since-no-backend-payment-or-order-service-is-available",
-      "featureTitle": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
-      "files": [
-        "frontend/src/components/CartDrawer.tsx",
-        "frontend/src/components/CheckoutForm.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-15"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-navbar-smooth-scroll-link-that-previously-pointed-to-the-services-section-so-it-now-points-to-the-new-products-section-anchor",
-      "featureTitle": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
-      "files": [
-        "frontend/src/components/Navbar.tsx",
-        "frontend/src/components/ProductsSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-16"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-footer-navigation-links-so-that-any-reference-to-the-services-section-is-renamed-to-match-the-new-products-shop-section-and-scrolls-to-the-correct-anchor",
-      "featureTitle": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
-      "files": [
-        "frontend/src/components/Footer.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-17"
+        "REQ-2"
       ],
       "confidence": "high"
     }

@@ -1,83 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T18:17:24.965Z",
+  "generatedAt": "2026-03-01T08:08:26.972Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 5,
-    "implemented": 5,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-13",
-        "summary": "Replace the existing ServicesSection with a new ProductsSection component. Display a curated grid of AuraFlora products (at minimum 4–6 items), each shown as a luxury product card consistent with the existing pastel design system. Each card should include a product image placeholder, product name, a short description, a price, and an 'Add to Cart' or 'Buy Now' call-to-action button styled in the AuraFlora pastel palette with elegant hover effects.",
+        "id": "REQ-1",
+        "summary": "Replace the brand story paragraphs in the AboutSection component with the following two paragraphs (simple, warm tone — not overly formal): 'Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.' and 'As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.'",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ProductCard.tsx",
-          "frontend/src/components/ProductsSection.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ProductCard.tsx",
-          "frontend/src/components/ProductsSection.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ]
       },
       {
-        "id": "REQ-14",
-        "summary": "Implement a client-side shopping cart. Users should be able to add products to a cart, view the cart (e.g. via a slide-out drawer or modal), see item quantities and a total price, and remove items. The cart UI must follow the AuraFlora pastel design system (frosted glass, soft pastel tones, serif headings).",
+        "id": "REQ-2",
+        "summary": "Replace the three stat highlights in the AboutSection (currently '100% Natural Ingredients' and '50+ Curated Collections' and 'Handcrafted with Care') with the following three feature highlights: (1) Title: 'Hand-Sculpted Florals', Description: 'Every bloom is individually shaped with meticulous attention.' (2) Title: 'Artisanal Craftsmanship', Description: 'Created with patience, precision, and creative intention.' (3) Title: 'Bespoke Creations', Description: 'Custom hues and designs tailored to your vision.'",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/contexts/CartContext.tsx",
-          "frontend/src/components/CartDrawer.tsx",
-          "frontend/src/components/Navbar.tsx",
-          "frontend/src/main.tsx",
-          "frontend/src/App.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/contexts/CartContext.tsx",
-          "frontend/src/components/CartDrawer.tsx",
-          "frontend/src/components/Navbar.tsx",
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-15",
-        "summary": "Add a checkout flow that allows users to place an order by submitting their name, email, and delivery address. On submission, open a pre-filled mailto: URI to aurafloraaf@gmail.com with the order details (items, quantities, prices, customer info) as the email body, since no backend payment or order service is available.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/CheckoutForm.tsx",
-          "frontend/src/components/CartDrawer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/CheckoutForm.tsx",
-          "frontend/src/components/CartDrawer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-16",
-        "summary": "Update the Navbar smooth-scroll link that previously pointed to the Services section so it now points to the new Products section anchor.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Navbar.tsx",
-          "frontend/src/components/ProductsSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Navbar.tsx",
-          "frontend/src/components/ProductsSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-17",
-        "summary": "Update the Footer navigation links so that any reference to the Services section is renamed to match the new Products/Shop section and scrolls to the correct anchor.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/AboutSection.tsx"
         ]
       }
     ]
@@ -87,21 +39,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/product-placeholder-1.dim_600x600.png",
-    "frontend/public/assets/generated/product-placeholder-2.dim_600x600.png",
-    "frontend/public/assets/generated/product-placeholder-3.dim_600x600.png",
-    "frontend/public/assets/generated/product-placeholder-4.dim_600x600.png",
-    "frontend/src/App.tsx",
-    "frontend/src/components/CartDrawer.tsx",
-    "frontend/src/components/CheckoutForm.tsx",
-    "frontend/src/components/Footer.tsx",
-    "frontend/src/components/Navbar.tsx",
-    "frontend/src/components/ProductCard.tsx",
-    "frontend/src/components/ProductsSection.tsx",
-    "frontend/src/components/ServiceCard.tsx",
-    "frontend/src/components/ServicesSection.tsx",
-    "frontend/src/contexts/CartContext.tsx",
-    "frontend/src/index.css",
+    "frontend/src/components/AboutSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { SiInstagram } from 'react-icons/si';
 
-const RECIPIENT_EMAIL = 'aurafloraaf@gmail.com';
+const RECIPIENT_EMAIL = 'hello.auraflora@gmail.com';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });

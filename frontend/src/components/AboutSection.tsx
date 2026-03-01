@@ -1,4 +1,19 @@
 export default function AboutSection() {
+  const highlights = [
+    {
+      title: 'Hand-Sculpted Florals',
+      description: 'Every bloom is individually shaped with meticulous attention.',
+    },
+    {
+      title: 'Artisanal Craftsmanship',
+      description: 'Created with patience, precision, and creative intention.',
+    },
+    {
+      title: 'Bespoke Creations',
+      description: 'Custom hues and designs tailored to your vision.',
+    },
+  ];
+
   return (
     <section id="about" className="relative py-32 lg:py-40 overflow-hidden bg-background">
       {/* Decorative blob */}
@@ -26,9 +41,9 @@ export default function AboutSection() {
             <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-foreground">
               Born from
               <br />
-              <span className="italic text-aura-lavender-deep">nature's</span>
+              <span className="italic text-aura-lavender-deep">heartfelt</span>
               <br />
-              whisper
+              ideas
             </h2>
 
             {/* Decorative line */}
@@ -42,22 +57,22 @@ export default function AboutSection() {
           {/* Right column — offset content */}
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-20">
             <p className="font-body text-lg text-foreground/60 leading-relaxed mb-8">
-              AuraFlora was born from a singular vision: to transform the ephemeral beauty of botanicals into enduring luxury experiences. Each creation is a meditation on form, fragrance, and feeling.
+              Our journey began with a quiet passion — to transform soft, textured fibers into enduring floral art. Each bloom is thoughtfully sculpted by hand, shaped petal by petal into creations that radiate warmth, charm, and individuality.
             </p>
             <p className="font-body text-lg text-foreground/60 leading-relaxed mb-12">
-              We source the rarest blooms from artisan growers across the globe, weaving them into bespoke arrangements, curated collections, and immersive sensory journeys that transcend the ordinary.
+              As an emerging studio, we are devoted to craftsmanship, detail, and the beauty of slow creation. Every piece is formed with intention — a gentle balance of texture, color, and imagination — designed to bring lasting joy to any space.
             </p>
 
-            {/* Stats */}
+            {/* Feature highlights */}
             <div className="grid grid-cols-3 gap-8">
-              {[
-                { value: '12+', label: 'Years of Craft' },
-                { value: '40+', label: 'Global Sources' },
-                { value: '∞', label: 'Possibilities' },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="font-display text-4xl font-light text-aura-rose mb-2">{stat.value}</div>
-                  <div className="text-xs tracking-widest uppercase text-foreground/40 font-medium">{stat.label}</div>
+              {highlights.map((item) => (
+                <div key={item.title} className="text-center">
+                  <div className="font-display text-sm font-semibold text-aura-rose mb-2 leading-snug">
+                    {item.title}
+                  </div>
+                  <div className="text-xs text-foreground/40 font-body leading-relaxed">
+                    {item.description}
+                  </div>
                 </div>
               ))}
             </div>

@@ -78,10 +78,10 @@ export default function Footer() {
 
             {/* Contact details */}
             <a
-              href="mailto:aurafloraaf@gmail.com"
+              href="mailto:hello.auraflora@gmail.com"
               className="text-sm text-aura-footer-fg/50 font-body hover:text-aura-rose transition-colors duration-300 block"
             >
-              aurafloraaf@gmail.com
+              hello.auraflora@gmail.com
             </a>
             <p className="text-sm text-aura-footer-fg/50 font-body mt-1">
               Mumbai
